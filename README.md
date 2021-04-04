@@ -1,4 +1,4 @@
-
+<!doctype html>
 <html>
   <body>
     
@@ -13,12 +13,12 @@
       
       </ul>
       <hr>
-      <ol>
-          <li style="color:darkred"><h3><u>Descrierea aplicației</u></h3></li>
-          <p>Această aplicație a fost creată pentru a eficientiza sistemul de împrumut și de restituire a cărților din cadrul unei biblioteci.<br> Rolurile din cadrul aplicației:<br>
-              <ol><li>Beneficiar</li> <li>Administrator</li></ol> <br>
-        Ca și utilizator poți căuta cărți după anumite criterii, poți împrumuta cărți și poți să vizualizezi statusul împrumuturilor tale.<br> Administratorul poate să vizualizeze lista utilizatorilor și împrumuturile lor. De asemenea, el trebuie să marcheze cărțile ca fiind restituite. Adminul actualizează lista cărților din cadrul bibliotecii, având opțiunea de a adăuga cărți.</p>
-          <li style="color:darkred"><h3><u>Tehnologii utilizate</u></h3></li>
+      
+        <h3 style="color:darkred"><u>Descrierea aplicației</u></h3><br>
+          <p>Această aplicație a fost creată pentru a eficientiza sistemul de împrumut și de restituire a cărților din cadrul unei biblioteci.<br> Rolurile din cadrul aplicației:<br></p>
+              <ul><li>Beneficiar</li> <li>Administrator</li></ul> <br>
+       <p> Ca și utilizator poți căuta cărți după anumite criterii, poți împrumuta cărți și poți să vizualizezi statusul împrumuturilor tale.<br> Administratorul poate să vizualizeze lista utilizatorilor și împrumuturile lor. De asemenea, el trebuie să marcheze cărțile ca fiind restituite. Adminul actualizează lista cărților din cadrul bibliotecii, având opțiunea de a adăuga cărți.</p>
+          <h3 style="color:darkred"><u>Tehnologii utilizate</u></h3><br>
           <ul>
               <li>Java</li>
               <li>JavaFX</li>
@@ -26,10 +26,8 @@
               <li>Nitrite Database</li>
               
           </ul>
-          <li style="color:darkred"><h3><u>Înregistrare și logare</u></h3></li> 
+      <h3 style="color:darkred"><u>Înregistrare și logare</u></h3><br> 
           <p>Pentru a putea beneficia de această aplicație trebuie în primul rând să te înregistrezi. Această înregistrare presupune completarea unui formular și setarea unui nume de autentificare unic și a unei parole unice. Pentru a beneficia de utilitățile aplicației trebuie să te loghezi cu numele de autentificare și parola setate la înregistrare.</p>
-      </ol>
-      <hr>
-      
+  
     </body>
 </html>
