@@ -1,33 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="400" prefWidth="600"
-          vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
-          fx:controller="org.loose.fis.sre.controllers.RegistrationController">
-    <padding>
-        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
-    </padding>
-    <Text id="title-text" text="FIS - Student Manager" GridPane.columnIndex="0" GridPane.columnSpan="2"
-          GridPane.rowIndex="0"/>
 
-    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-
-    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-
-    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-
-    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-
-    <Label text="Role:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-
-    <ChoiceBox fx:id="role" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-    </ChoiceBox>
-
-    <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
-    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
-        <Button onAction="#handleRegisterAction" text="Register"/>
-    </HBox>
-</GridPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.RegistrationController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="253.0" style="-fx-background-color: #C0C0C0;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="borderView" layoutX="30.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblioteca Online" textAlignment="CENTER" wrappingWidth="236.1875">
+               <font>
+                  <Font name="Freestyle Script" size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="119.0" fitWidth="298.0" layoutX="-1.0" layoutY="396.0" opacity="0.74" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0">
+               <image>
+                  <Image url="@images/border.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imageView" fitHeight="238.0" fitWidth="296.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="517.0" prefWidth="306.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="usernameField" layoutX="120.0" layoutY="69.0" promptText="Username" style="-fx-background-color: #DCDCDC; -fx-border-color: #000000;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordField" layoutX="121.0" layoutY="109.0" promptText="Password" style="-fx-background-color: #DCDCDC; -fx-border-color: #000000;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </PasswordField>
+            <Button layoutX="170.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleRegisterAction" text="Register" textAlignment="CENTER" textFill="#00000065">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text layoutX="152.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Register">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nameField" layoutX="121.0" layoutY="149.0" promptText="Name" style="-fx-background-color: #DCDCDC; -fx-border-color: #000000;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="emailField" layoutX="120.0" layoutY="186.0" promptText="Email" style="-fx-background-color: #DCDCDC; -fx-border-color: #000000;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="addressField" layoutX="120.0" layoutY="224.0" promptText="Address" style="-fx-background-color: #DCDCDC; -fx-border-color: #000000;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="phoneField" layoutX="120.0" layoutY="268.0" promptText="Phone number" style="-fx-background-color: #DCDCDC; -fx-border-color: #000000;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Text layoutX="84.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" textAlignment="CENTER" wrappingWidth="234.87535858154297">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Text>
+            <Label fx:id="registrationMessage" alignment="CENTER" layoutX="6.0" layoutY="443.0" prefHeight="18.0" prefWidth="417.0" textAlignment="JUSTIFY" textFill="#e10808">
+               <font>
+                  <Font name="Broadway" size="13.0" />
+               </font></Label>
+            <Button fx:id="logButton" layoutX="169.0" layoutY="393.0" mnemonicParsing="false" onAction="#handleLogAction" prefHeight="26.0" prefWidth="64.0" text="Log in" textAlignment="CENTER" textFill="#00000065">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
