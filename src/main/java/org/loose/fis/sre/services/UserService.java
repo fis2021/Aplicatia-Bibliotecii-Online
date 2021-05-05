@@ -37,6 +37,7 @@ public class UserService {
 
     }
 
+
     private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
         Cursor<User> cursor = userRepository.find();
         for (User user : cursor) {
@@ -46,6 +47,17 @@ public class UserService {
 
             }
         }
+    }
+    public static boolean checkIsAdmin(String username)  {
+        Cursor<User> cursor = userRepository.find();
+        for (User user : cursor) {
+         if (username.equals(user.getUsername())) {
+             if (user.isAdmin() == true) {
+                 return true;
+             }
+         }
+        }
+        return false;
     }
     public static boolean UpperCaseExists(String password) throws NoUpperCaseException
     {
@@ -108,6 +120,14 @@ public class UserService {
             throw new InvalidUsernameException("Introduced username is incorrect");
         if(ok2==0)
             throw new IncorrectPasswordException("Introduced password is incorrect");
+    }
+    public static void addAdmin(String username, String password,String name,String email,String address,String phone) throws UsernameAlreadyExistsException,NoUpperCaseException,UncompletedFieldsException
+    {    AllFieldsCompleted(username,password,name,email,address,phone);
+        checkUserDoesNotAlreadyExist(username);
+        UpperCaseExists(password);
+        User u=new User(username,encodePassword(username,password),name,email,address,phone);
+         u.setisAdmin();
+        userRepository.insert(u);
     }
 
     private static MessageDigest getMessageDigest() {

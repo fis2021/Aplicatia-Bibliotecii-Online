@@ -10,6 +10,7 @@ public class User {
     private String email;
     private String address;
     private String phone;
+    private boolean admin=false;
 
     public User() {
     }
@@ -22,7 +23,14 @@ public class User {
         this.email=email;
         this.phone=phone;
     }
-
+    public void setisAdmin()
+    {
+        this.admin=true;
+    }
+    public boolean isAdmin()
+    {
+        return this.admin;
+    }
     public String getUsername() {
         return username;
     }
