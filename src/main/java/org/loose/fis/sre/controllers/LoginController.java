@@ -37,11 +37,28 @@ public class LoginController {
         scene.setScene(new Scene(root,725,490));
     }
 
-    public void  handleLoginAction()  {
+    public void  handleLoginAction() throws IOException {
         try
         {
             UserService.userExists(usernameField.getText(),passwordField.getText());
             logMessage.setText("Successful log in");
+            if(UserService.checkIsAdmin(usernameField.getText())==true)
+            {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("admin_main_page.fxml"));
+                Stage scene= (Stage) logButton.getScene().getWindow();
+                scene.setTitle("Admin");
+                scene.setScene(new Scene(root,725,490));
+            }
+            else
+            {
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_main_page.fxml"));
+                Stage scene= (Stage) logButton.getScene().getWindow();
+                scene.setScene(new Scene(root,1280,720));
+//                scene.setHeight(1080);
+//                scene.setWidth(1920);
+                scene.setTitle("Client");
+                scene.setFullScreen(true);
+            }
 
 
         }
