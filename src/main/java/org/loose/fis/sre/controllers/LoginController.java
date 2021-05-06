@@ -1,13 +1,20 @@
 package org.loose.fis.sre.controllers;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.VPos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+import org.h2.mvstore.cache.CacheLongKeyLIRS;
 import org.loose.fis.sre.exceptions.IncorrectPasswordException;
 import org.loose.fis.sre.exceptions.InvalidUsernameException;
 import org.loose.fis.sre.services.UserService;
@@ -16,6 +23,7 @@ import javafx.scene.control.TextField;
 import javax.swing.*;
 
 import java.io.IOException;
+import java.io.ObjectInputFilter;
 //import java.awt.*;
 
 public class LoginController {
@@ -47,17 +55,30 @@ public class LoginController {
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("admin_main_page.fxml"));
                 Stage scene= (Stage) logButton.getScene().getWindow();
                 scene.setTitle("Admin");
-                scene.setScene(new Scene(root,725,490));
+                scene.setScene(new Scene(root,1920,1080));
+                scene.setResizable(false);
+                scene.setMinHeight(1080);
+                scene.setMinWidth(1920);
+                scene.setMaxHeight(1080);
+                scene.setMaxWidth(1920);
+                scene.setTitle("Client");
+                scene.setFullScreen(true);
+
+
             }
             else
             {
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_main_page.fxml"));
                 Stage scene= (Stage) logButton.getScene().getWindow();
-                scene.setScene(new Scene(root,1280,720));
-//                scene.setHeight(1080);
-//                scene.setWidth(1920);
+                scene.setScene(new Scene(root,1920,1080));
+                scene.setResizable(false);
+                scene.setMinHeight(1080);
+                scene.setMinWidth(1920);
+                scene.setMaxHeight(1080);
+                scene.setMaxWidth(1920);
                 scene.setTitle("Client");
                 scene.setFullScreen(true);
+
             }
 
 
