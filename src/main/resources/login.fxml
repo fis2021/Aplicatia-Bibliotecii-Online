@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="725.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LoginController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="253.0" style="-fx-background-color: #C0C0C0;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="238.0" fitWidth="296.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="69.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biblioteca Online">
+               <font>
+                  <Font name="Freestyle Script" size="36.0" />
+               </font>
+            </Text>
+       
+            <ImageView fitHeight="117.0" fitWidth="299.0" layoutX="-3.0" layoutY="405.0" opacity="0.74" pickOnBounds="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-2.0">
+               <image>
+                  <Image url="@images/border.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane maxHeight="481.0" maxWidth="464.0" prefHeight="481.0" prefWidth="464.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="usernameField" layoutX="122.0" layoutY="160.0" prefHeight="35.0" prefWidth="175.0" promptText="Username" style="-fx-background-color: #DCDCDC; -fx-border-color: #000000;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordField" layoutX="123.0" layoutY="227.0" prefHeight="35.0" prefWidth="175.0" promptText="Password" style="-fx-background-color: #DCDCDC; -fx-border-color: #000000;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </PasswordField>
+
+            <Button fx:id="logButton" layoutX="162.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleLoginAction" prefHeight="26.0" prefWidth="90.0" text="Log in" textAlignment="CENTER" textFill="#00000065">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text layoutX="112.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User log in" textAlignment="CENTER" wrappingWidth="191.723388671875">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Label fx:id="logMessage" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="69.0" layoutY="397.0" prefHeight="83.0" prefWidth="351.0" textAlignment="JUSTIFY" textFill="#e10808">
+               <font>
+                  <Font name="Broadway" size="13.0" />
+               </font></Label>
+            <Button fx:id="regButton" layoutX="162.0" layoutY="364.0" mnemonicParsing="false" onAction="#handleRegistrationView" prefHeight="26.0" prefWidth="90.0" text="Registration" textAlignment="CENTER" textFill="#00000065">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <styleClass>
+            <String fx:value="right" />
+            <String fx:value="responsive" />
+         </styleClass>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </right>
+</BorderPane>
