@@ -61,7 +61,7 @@ public class LoginController {
                 scene.setMinWidth(1920);
                 scene.setMaxHeight(1080);
                 scene.setMaxWidth(1920);
-                scene.setTitle("Client");
+                scene.setTitle("Admin");
                 scene.setFullScreen(true);
 
 
