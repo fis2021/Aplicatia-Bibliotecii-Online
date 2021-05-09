@@ -24,7 +24,36 @@ import java.util.EventObject;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class AddBookController  {
+public class AddBookController implements Initializable{
+    @FXML
+
+    private ComboBox LanguageBox;
+    @FXML
+    private AnchorPane rootElement;
+    @FXML
+    private Button selectFileButton;
+    @FXML
+    private ImageView bookImage;
+
+    public void selectFileAction() {
+        Stage stage = (Stage) selectFileButton.getScene().getWindow();
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+//                new FileChooser.ExtensionFilter("All Images", "*.*"),
+                new FileChooser.ExtensionFilter("JPG", "*.jpg"),
+                new FileChooser.ExtensionFilter("PNG", "*.png")
+        );
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        Image fxImage = new Image(new File(selectedFile.getAbsolutePath()).toURI().toString());
+        bookImage.setImage(fxImage);
+    }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        LanguageBox.getItems().addAll("Română", "Engleză", "Franceză", "Germană");
+
+
+    }
 }
