@@ -3,6 +3,7 @@ package org.loose.fis.sre.model;
 import org.dizitart.no2.objects.Id;
 
 import java.util.Objects;
+import java.util.TimeZone;
 import java.util.UUID;
 
 public class Book {
