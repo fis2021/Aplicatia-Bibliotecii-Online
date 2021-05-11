@@ -31,9 +31,16 @@ public class Book {
     public Book() {
 
     }
+    public UUID rando()
+    {
+        this.book_id =UUID.randomUUID();
+        return this.book_id;
 
-    public void increaseNrBook() {
+    }
+
+    public int increaseNrBook() {
         this.stoc++;
+        return this.stoc;
     }
 
     public int getStoc() {

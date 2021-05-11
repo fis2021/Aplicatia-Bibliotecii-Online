@@ -1,5 +1,7 @@
 package org.loose.fis.sre.controllers;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -35,6 +37,10 @@ public class AddBookController implements Initializable{
     private  Image fxImage;
     @FXML
     private Text bookMessage;
+    @FXML
+    private Text stocMessage;
+    @FXML
+    private Button stocButton;
 
     public void selectFileAction() {
         Stage stage = (Stage) selectFileButton.getScene().getWindow();
@@ -52,6 +58,7 @@ public class AddBookController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        stocButton.setVisible(false);
         LanguageBox.getItems().addAll("Română", "Engleză", "Franceză", "Germană");
         literarBox.getItems().addAll("Epic","Liric","Dramatic");
 
@@ -62,9 +69,19 @@ public class AddBookController implements Initializable{
         try
         { BookService.addBook(titluField.getText(),autorField.getText(),(String) LanguageBox.getValue(),(String)literarBox.getValue(),domField.getText(),fxImage.getUrl(), descrArea.getText().replaceAll("\n", System.getProperty("line.separator")));
             bookMessage.setText("Carte adăugată cu succes");
+
         }
         catch(BookExistsException e){
             bookMessage.setText("Această carte există deja");
+            stocMessage.setText("Vrei să mărești stocul acestei cărți?");
+            stocButton.setVisible(true);
+            stocButton.setOnAction(v-> {
+                System.out.println("I was clicked!!");
+                BookService.increaseStoc(titluField.getText(),autorField.getText(),(String)LanguageBox.getValue());
+
+            });
+
         }
     }
+
 }

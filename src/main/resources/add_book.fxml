@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootElement" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AddBookController">
+<AnchorPane fx:id="rootElement" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AddBookController">
    <children>
       <ComboBox fx:id="LanguageBox" layoutX="65.0" layoutY="170.0" prefWidth="150.0" promptText="Limba" />
       <TextField fx:id="titluField" layoutX="65.0" layoutY="54.0" prefHeight="25.0" prefWidth="290.0" promptText="Titlu" />
@@ -20,9 +20,14 @@
       <ComboBox fx:id="literarBox" layoutX="65.0" layoutY="229.0" prefWidth="150.0" promptText="Gen literar" />
       <TextArea fx:id="descrArea" layoutX="483.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" promptText="Descrierea cărții" />
       <Button fx:id="addButton" layoutX="230.0" layoutY="482.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="25.0" prefWidth="269.0" text="Add book" />
-      <Text fx:id="bookMessage" fill="RED" layoutX="119.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="505.13671875">
+      <Text fx:id="bookMessage" fill="RED" layoutX="140.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="505.13671875">
          <font>
             <Font name="System Bold Italic" size="15.0" />
+         </font></Text>
+      <Button fx:id="stocButton" layoutX="483.0" layoutY="633.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="25.0" prefWidth="129.0" text="Mărește stocul" />
+      <Text fx:id="stocMessage" layoutX="230.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="236.0">
+         <font>
+            <Font size="15.0" />
          </font></Text>
    </children>
 </AnchorPane>
