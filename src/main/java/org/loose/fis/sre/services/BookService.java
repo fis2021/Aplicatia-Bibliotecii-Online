@@ -3,9 +3,8 @@ package org.loose.fis.sre.services;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.Cursor;
 import org.dizitart.no2.objects.ObjectRepository;
-import org.loose.fis.sre.exceptions.BookIDExistsException;
+import org.loose.fis.sre.exceptions.BookExistsException;
 import org.loose.fis.sre.model.Book;
-import org.loose.fis.sre.model.User;
 
 import static org.loose.fis.sre.services.FileSystemService.getPathToFile;
 
@@ -21,16 +20,21 @@ public class BookService {
 
         bookRepository= database.getRepository(Book.class);
     }
-    public static void addBook(String id,String titlu,String autor,String limba,String gen,String dom,String path,String description) throws BookIDExistsException
-    {
-        bookRepository.insert(new Book(id,titlu,autor,limba,gen,dom,path,description));
+    public static void addBook(String titlu,String autor,String limba,String gen,String dom,String path,String description) throws BookExistsException
+    {   checkBookDoesNotAlreadyExists(titlu,autor,limba);
+        bookRepository.insert(new Book(titlu,autor,limba,gen,dom,path,description));
     }
-    public static void checkBookDoesNotAlreadyExists(String id) throws BookIDExistsException
+    public static void checkBookDoesNotAlreadyExists(String titlu, String autor, String limba) throws BookExistsException
     {
         Cursor<Book> cursor = bookRepository.find();
         for (Book book : cursor) {
-            if (id.equals(book.getBook_id())) {
-                throw new BookIDExistsException("This ID already exists");
+            if (titlu.equals(book.getTitlu())) {
+                if(autor.equals(book.getAutor()))
+                {
+                    if(limba.equals(book.getLimba())) {
+                        throw new BookExistsException("Cartea există deja în bibliotecă!");
+                    }
+                }
 
             }
         }

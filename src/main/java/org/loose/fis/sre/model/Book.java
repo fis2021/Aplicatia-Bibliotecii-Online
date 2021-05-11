@@ -3,10 +3,11 @@ package org.loose.fis.sre.model;
 import org.dizitart.no2.objects.Id;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class Book {
     @Id
-    private String book_id;
+    private UUID book_id;
     private String titlu;
     private String autor;
     private String limba;
@@ -16,8 +17,8 @@ public class Book {
     private String description;
     private int stoc = 0;
 
-    public Book(String book_id, String titlu, String autor, String limba, String gen_literar, String dom_stintific, String photo_path, String description) {
-        this.book_id = book_id;
+    public Book( String titlu, String autor, String limba, String gen_literar, String dom_stintific, String photo_path, String description) {
+        this.book_id =UUID.randomUUID();
         this.titlu = titlu;
         this.autor = autor;
         this.limba = limba;
@@ -26,6 +27,9 @@ public class Book {
         this.photo_path = photo_path;
         this.description = description;
         this.stoc = 1;
+    }
+    public Book() {
+
     }
 
     public void increaseNrBook() {
@@ -36,13 +40,10 @@ public class Book {
         return this.stoc;
     }
 
-    public String getBook_id() {
+    public UUID getBook_id() {
         return book_id;
     }
 
-    public void setBook_id(String book_id) {
-        this.book_id = book_id;
-    }
 
     public String getTitlu() {
         return titlu;

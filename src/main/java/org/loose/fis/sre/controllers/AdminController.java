@@ -16,8 +16,13 @@ public class AdminController {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("add_book.fxml"));
         Stage scene= (Stage) addBookButton.getScene().getWindow();
         scene.setTitle("Add Book");
-        scene.setScene(new Scene(root,725,490));
-        scene.setFullScreen(true);
+        scene.setScene(new Scene(root,730,560));
+        scene.setFullScreen(false);
+        scene.setResizable(false);
+        scene.setMinHeight(560);
+        scene.setMinWidth(730);
+        scene.setMaxHeight(580);
+        scene.setMaxWidth(730);
     }
 
 }
