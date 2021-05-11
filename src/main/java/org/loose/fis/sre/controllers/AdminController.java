@@ -9,14 +9,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.loose.fis.sre.model.Book;
+import javafx.scene.image.ImageView ;
 import org.loose.fis.sre.model.ClickedBook;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -25,12 +27,26 @@ import java.util.ResourceBundle;
 
 import static org.loose.fis.sre.services.BookService.getLast;
 
-public class ClientController implements Initializable {
+public class AdminController implements Initializable {
     @FXML
-    Text labelMain;
+    private Button addBookButton;
+    @FXML
+    private Text labelMain;
     @FXML
     private ImageView imgView;
     private Book currentBook;
+    public void handleAddBook() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("add_book.fxml"));
+        Stage scene= (Stage) addBookButton.getScene().getWindow();
+        scene.setTitle("Add Book");
+        scene.setScene(new Scene(root,730,700));
+        scene.setFullScreen(false);
+        scene.setResizable(false);
+        scene.setMinHeight(700);
+        scene.setMinWidth(730);
+        scene.setMaxHeight(700);
+        scene.setMaxWidth(730);
+    }
     public void handleImg() throws IOException {
         ClickedBook.selectedBook=currentBook;
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("book.fxml"));
@@ -45,7 +61,7 @@ public class ClientController implements Initializable {
         scene.setFullScreen(true);
 
     }
-    public void handleTransition2(){
+    public void handleTransition(){
 
 
         double msgWidth = imgView.getLayoutBounds().getWidth();
@@ -62,7 +78,7 @@ public class ClientController implements Initializable {
 
 
     }
-    public void handleTransition(){
+    public void handleTransition2(){
 
 
         double msgWidth = labelMain.getLayoutBounds().getWidth();
@@ -79,6 +95,7 @@ public class ClientController implements Initializable {
 
 
     }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -119,6 +136,5 @@ public class ClientController implements Initializable {
         thread.start();
 
     }
-
 
 }
