@@ -29,6 +29,7 @@ public class Main extends Application {
         primaryStage.setTitle("Welcome");
         primaryStage.setScene(new Scene(root, 725, 490));
         primaryStage.show();
+
     }
 
     private void initDirectory() {
