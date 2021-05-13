@@ -34,6 +34,8 @@ public class AdminController implements Initializable {
     private Text labelMain;
     @FXML
     private ImageView imgView;
+    @FXML
+    private Button outButton;
     private Book currentBook;
     public void handleAddBook() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("add_book.fxml"));
@@ -49,7 +51,7 @@ public class AdminController implements Initializable {
     }
     public void handleImg() throws IOException {
         ClickedBook.selectedBook=currentBook;
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("book.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("bookAdmin.fxml"));
         Stage scene= (Stage) imgView.getScene().getWindow();
         scene.setScene(new Scene(root,1920,1080));
         scene.setResizable(false);
@@ -94,6 +96,18 @@ public class AdminController implements Initializable {
 
 
 
+    }
+    public void handleOut() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+        Stage scene= (Stage) outButton.getScene().getWindow();
+        scene.setScene(new Scene(root,725,490));
+        scene.setResizable(false);
+        scene.setMinHeight(490);
+        scene.setMinWidth(725);
+        scene.setMaxHeight(490);
+        scene.setMaxWidth(725);
+        scene.setTitle("Welcome");
+        scene.setFullScreen(false);
     }
 
 

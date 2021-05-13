@@ -105,7 +105,7 @@ public class UserService {
         return new String(hashedPassword, StandardCharsets.UTF_8)
                 .replace("\"", ""); //to be able to save in JSON format
     }
-    public static void userExists(String username,String password) throws InvalidUsernameException, IncorrectPasswordException {
+    public static User userExists(String username,String password) throws InvalidUsernameException, IncorrectPasswordException {
         int ok=0,ok2=0;
         for(User user :userRepository.find())
         {
@@ -113,6 +113,7 @@ public class UserService {
             {   ok=1;
                 if(encodePassword(username,password).equals(user.getPassword())) {
                     ok2=1;
+                    return user;
                 }
             }
         }
@@ -120,6 +121,7 @@ public class UserService {
             throw new InvalidUsernameException("Introduced username is incorrect");
         if(ok2==0)
             throw new IncorrectPasswordException("Introduced password is incorrect");
+        return null;
     }
     public static void addAdmin(String username, String password,String name,String email,String address,String phone) throws UsernameAlreadyExistsException,NoUpperCaseException,UncompletedFieldsException
     {    AllFieldsCompleted(username,password,name,email,address,phone);
@@ -129,6 +131,7 @@ public class UserService {
          u.setisAdmin();
         userRepository.insert(u);
     }
+
 
     private static MessageDigest getMessageDigest() {
         MessageDigest md;

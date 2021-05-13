@@ -17,6 +17,8 @@ import javafx.util.Duration;
 import org.h2.mvstore.cache.CacheLongKeyLIRS;
 import org.loose.fis.sre.exceptions.IncorrectPasswordException;
 import org.loose.fis.sre.exceptions.InvalidUsernameException;
+import org.loose.fis.sre.model.LoggedUser;
+import org.loose.fis.sre.model.User;
 import org.loose.fis.sre.services.UserService;
 import javafx.scene.control.TextField;
 
@@ -48,7 +50,7 @@ public class LoginController {
     public void  handleLoginAction() throws IOException {
         try
         {
-            UserService.userExists(usernameField.getText(),passwordField.getText());
+            LoggedUser.loggedUser=UserService.userExists(usernameField.getText(),passwordField.getText());
             logMessage.setText("Successful log in");
             if(UserService.checkIsAdmin(usernameField.getText())==true)
             {

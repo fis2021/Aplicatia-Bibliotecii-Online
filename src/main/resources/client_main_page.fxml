@@ -30,31 +30,31 @@
             <Font name="Century Schoolbook" size="58.0" />
          </font>
       </Text>
-      <Button layoutX="1643.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="284.0" styleClass="bt" stylesheets="@buttons.css" text="My profile" textAlignment="CENTER">
+      <Button layoutX="1628.0" layoutY="6.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="284.0" styleClass="bt" stylesheets="@buttons.css" text="My profile" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Button>
-      <Button layoutX="1307.0" layoutY="227.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="284.0" styleClass="bt" stylesheets="@buttons.css" text="Search a book">
+      <Button layoutX="1221.0" layoutY="271.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="284.0" styleClass="bt" stylesheets="@buttons.css" text="Search a book">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Button>
-      <TextField layoutX="375.0" layoutY="221.0" prefHeight="59.0" prefWidth="900.0">
+      <TextField layoutX="397.0" layoutY="268.0" prefHeight="74.0" prefWidth="806.0" text="Enter the title">
          <font>
             <Font size="58.0" />
          </font>
       </TextField>
-      <Label layoutX="1131.0" layoutY="423.0" text="Latest Books" textFill="WHITE">
+      <Label layoutX="1152.0" layoutY="465.0" text="Latest Books" textFill="WHITE">
          <font>
             <Font size="58.0" />
          </font>
       </Label>
-      <Button layoutX="-18.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="284.0" styleClass="bt" stylesheets="@buttons.css" text="Logout" textAlignment="CENTER">
+      <Button fx:id="outButton" layoutX="15.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#handleOut" prefHeight="117.0" prefWidth="284.0" styleClass="bt" stylesheets="@buttons.css" text="Logout" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Button>
-      <ImageView fx:id="imgView" onMouseClicked="#handleImg" fitHeight="306.0" fitWidth="369.0" layoutX="1134.0" layoutY="643.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgView" fitHeight="306.0" fitWidth="369.0" layoutX="1134.0" layoutY="643.0" onMouseClicked="#handleImg" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

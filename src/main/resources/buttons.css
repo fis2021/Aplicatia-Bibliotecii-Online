@@ -1,7 +1,9 @@
 .bt {
 
     -fx-background-radius:100;
-    -fx-text-fill:white ;
+    -fx-text-fill:red;
     -fx-background-color:#2f2f2fa3;
+    -fx-border-color: red;
+    -fx-border-radius: 100;
 
 }
