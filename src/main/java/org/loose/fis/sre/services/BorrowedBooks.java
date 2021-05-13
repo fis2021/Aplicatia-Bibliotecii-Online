@@ -4,6 +4,7 @@ package org.loose.fis.sre.services;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.Cursor;
 import org.dizitart.no2.objects.ObjectRepository;
+import org.loose.fis.sre.exceptions.Already3BooksBorrowedException;
 import org.loose.fis.sre.model.Book;
 import org.loose.fis.sre.model.BorrowedBook;
 import org.loose.fis.sre.model.User;
@@ -24,14 +25,17 @@ public class BorrowedBooks {
 
         borrowedRepository = database.getRepository(BorrowedBook.class);
     }
-    public static void addBorrowedBook(User u, Book b)
-    {   BorrowedBook bb=new BorrowedBook(b, u);
+    public static void addBorrowedBook(User u, Book b)  throws Already3BooksBorrowedException
+    {   if(BorrowedBooksForOne(u)<3)
+    {BorrowedBook bb=new BorrowedBook(b, u);
         UUID uid=bb.getId();
         while (checkIDisUnic(uid) == false) {
             uid = bb.rando();
             checkIDisUnic(uid);
         }
-        borrowedRepository.insert(bb);
+        borrowedRepository.insert(bb);}
+        else
+        throw new Already3BooksBorrowedException("Deja ai 3 carti imprumutate!!");
     }
     public static boolean checkIDisUnic(UUID u) {
         Cursor<BorrowedBook> cursor = borrowedRepository.find();
@@ -43,4 +47,17 @@ public class BorrowedBooks {
         return true;
 
     }
+    public static int  BorrowedBooksForOne(User u)
+    {   int c=0;
+        Cursor<BorrowedBook> cb=borrowedRepository.find();
+        for(BorrowedBook bc:cb)
+        {
+            if(bc.getU().getUsername().equals(u.getUsername()))
+            {
+                c++;
+            }
+        }
+        return c;
+    }
+
 }
