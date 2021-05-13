@@ -20,7 +20,7 @@ public class BookService {
 
     public static void initDatabase() {
 
-        Nitrite database = Nitrite.builder()
+            Nitrite database = Nitrite.builder()
                 .filePath(getPathToFile("books.db").toFile())
                 .openOrCreate("biblioteca", "biblioteca");
 

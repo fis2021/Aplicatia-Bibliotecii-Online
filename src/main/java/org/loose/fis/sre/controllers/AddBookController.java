@@ -73,8 +73,7 @@ public class AddBookController implements Initializable{
 
 
     }
-    public void handleAddBook()
-    {
+    public void handleAddBook() throws IOException {
         try
         { BookService.addBook(titluField.getText(),autorField.getText(),(String) LanguageBox.getValue(),(String)literarBox.getValue(),domField.getText(),fxImage.getUrl(), descrArea.getText().replaceAll("\n", System.getProperty("line.separator")));
             bookMessage.setText("Carte adăugată cu succes!");
@@ -105,9 +104,7 @@ public class AddBookController implements Initializable{
       catch(NullPointerException e)
             {
                 bookMessage.setText("You must complete all the fields!");
-            } catch (IOException e) {
-            e.printStackTrace();
-        }
+            }
 
     }
 

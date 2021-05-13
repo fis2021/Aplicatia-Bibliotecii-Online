@@ -55,6 +55,6 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Button>
-      <ImageView fx:id="imgView" onMouseClicked="#handleImg" fitHeight="306.0" fitWidth="369.0" layoutX="1134.0" layoutY="643.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgView" fitHeight="306.0" fitWidth="369.0" layoutX="1134.0" layoutY="643.0" onMouseClicked="#handleImg" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

@@ -48,7 +48,7 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Button>
-      <ImageView fx:id="imgView" onMouseClicked="#handleImg" fitHeight="350.0" fitWidth="542.0" layoutX="913.0" layoutY="629.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgView" fitHeight="350.0" fitWidth="542.0" layoutX="913.0" layoutY="629.0" onMouseClicked="#handleImg" pickOnBounds="true" preserveRatio="true" />
    </children>
    <effect>
       <Blend />
