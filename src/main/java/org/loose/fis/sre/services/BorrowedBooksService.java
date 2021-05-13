@@ -5,6 +5,7 @@ import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.Cursor;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.sre.exceptions.Already3BooksBorrowedException;
+import org.loose.fis.sre.exceptions.AlreadyBorrowedException;
 import org.loose.fis.sre.model.Book;
 import org.loose.fis.sre.model.BorrowedBook;
 import org.loose.fis.sre.model.User;
@@ -13,7 +14,7 @@ import java.util.UUID;
 
 import static org.loose.fis.sre.services.FileSystemService.getPathToFile;
 
-public class BorrowedBooks {
+public class BorrowedBooksService {
     public static ObjectRepository<BorrowedBook> borrowedRepository;
 
 
@@ -25,9 +26,10 @@ public class BorrowedBooks {
 
         borrowedRepository = database.getRepository(BorrowedBook.class);
     }
-    public static void addBorrowedBook(User u, Book b)  throws Already3BooksBorrowedException
+    public static void addBorrowedBook(User u, Book b)  throws Already3BooksBorrowedException,AlreadyBorrowedException
     {   if(BorrowedBooksForOne(u)<3)
-    {BorrowedBook bb=new BorrowedBook(b, u);
+    {    BorrowedBook bb=new BorrowedBook(b, u);
+        checkIfThisBookIsBorrowed(u,b);
         UUID uid=bb.getId();
         while (checkIDisUnic(uid) == false) {
             uid = bb.rando();
@@ -58,6 +60,25 @@ public class BorrowedBooks {
             }
         }
         return c;
+    }
+    public static void checkIfThisBookIsBorrowed(User u,Book b) throws AlreadyBorrowedException
+    {
+        Cursor<BorrowedBook> cb=borrowedRepository.find();
+        for(BorrowedBook bc:cb)
+        {
+            if(u.getUsername().equals(bc.getU().getUsername()))
+            {
+                if(b.getBook_id().equals(bc.getB().getBook_id()))
+                {
+                    throw new AlreadyBorrowedException("Ai împrumutat deja această carte!");
+                }
+            }
+        }
+
+    }
+    public static void setStock(Book b)
+    {
+
     }
 
 }

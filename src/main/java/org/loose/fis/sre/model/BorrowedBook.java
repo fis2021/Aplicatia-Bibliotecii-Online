@@ -21,6 +21,10 @@ public class BorrowedBook {
         return this.id;
 
     }
+    public BorrowedBook()
+    {
+
+    }
     public Book getB() {
         return b;
     }

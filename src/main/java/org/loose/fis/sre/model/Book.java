@@ -43,6 +43,10 @@ public class Book {
         this.stoc++;
         return this.stoc;
     }
+    public int decrementNrBook() {
+        this.stoc--;
+        return this.stoc;
+    }
 
     public int getStoc() {
         return this.stoc;
