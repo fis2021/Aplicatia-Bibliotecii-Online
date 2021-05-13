@@ -7,14 +7,14 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import org.loose.fis.sre.exceptions.Already3BooksBorrowedException;
-import org.loose.fis.sre.exceptions.AlreadyBorrowedException;
 import org.loose.fis.sre.model.ClickedBook;
 import org.loose.fis.sre.model.LoggedUser;
 import org.loose.fis.sre.services.BorrowedBooksService;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static org.loose.fis.sre.services.BorrowedBooksService.ALready3Books;
 
 public class ViewBookController implements Initializable {
      @FXML
@@ -35,7 +35,7 @@ public class ViewBookController implements Initializable {
     private Text borrowMessage;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Image img=new Image(ClickedBook.selectedBook.getPhoto_path());
+        Image img = new Image(ClickedBook.selectedBook.getPhoto_path());
         imgView.setImage(img);
         titluText.setText(ClickedBook.selectedBook.getTitlu());
         descArea.setText(ClickedBook.selectedBook.getDescription());
@@ -43,22 +43,32 @@ public class ViewBookController implements Initializable {
         lgText.setText(ClickedBook.selectedBook.getLimba());
         catText.setText(ClickedBook.selectedBook.getDom_stiintific());
         genText.setText(ClickedBook.selectedBook.getGen_literar());
+        if (BorrowedBooksService.checkIfThisBookIsBorrowedByThaSameUser(LoggedUser.loggedUser, ClickedBook.selectedBook) == false) {
+            borrowButton.setDisable(true);
+            borrowMessage.setText("Ai deja această carte împrumutată!");
+        } else if (BorrowedBooksService.CheckIfThisBookStockIsOk(ClickedBook.selectedBook) == false) {
+            borrowButton.setDisable(true);
+            borrowMessage.setText("Această carte nu este disponibilă!");
+        } else if (ALready3Books(LoggedUser.loggedUser) == false) {
 
+            borrowButton.setDisable(true);
+            borrowMessage.setText("Ai depasit numarul maxim de imprumuturi!");
+
+        }
     }
+
+
 
     public void handleBorrow()
-    {   borrowButton.setOnAction(v-> {
-        try {
+    {
+
             BorrowedBooksService.addBorrowedBook(LoggedUser.loggedUser, ClickedBook.selectedBook);
+            borrowButton.setDisable(true);
             borrowMessage.setText("Carte împrumutată cu succes");
             ClickedBook.selectedBook.decrementNrBook();
-        } catch (Already3BooksBorrowedException e) {
-            borrowMessage.setText(e.getMessage());
-        }
-        catch(AlreadyBorrowedException e)
-        {
-            borrowMessage.setText(e.getMessage());
-        }
-         });
+
     }
+
+
 }
+
