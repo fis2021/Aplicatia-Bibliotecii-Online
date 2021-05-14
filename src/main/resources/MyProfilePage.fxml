@@ -14,7 +14,7 @@
             <Font name="Bernard MT Condensed" size="36.0" />
          </font>
       </TextArea>
-      <Button fx:id="borrowedBooksList" layoutX="67.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleSeeListOfBorrowedBooks" prefHeight="42.0" prefWidth="146.0" text="My borrowed books" />
+      <Button fx:id="borrowedBooks" layoutX="67.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleSeeListOfBorrowedBooks" prefHeight="42.0" prefWidth="146.0" text="My borrowed books" />
       <ImageView fitHeight="166.0" fitWidth="239.0" layoutX="347.0" layoutY="220.0">
          <image>
             <Image url="@images/_methode_times_prod_web_bin_eb0d0988-2f4f-11eb-8bd6-64d3c9126a9b.png" />

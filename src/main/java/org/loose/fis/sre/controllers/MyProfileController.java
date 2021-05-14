@@ -13,9 +13,11 @@ import java.io.IOException;
 public class MyProfileController {
 
     @FXML
-     Button borrowedBooksList;
+     Button borrowedBooks;
+
 
     public void handleSeeListOfBorrowedBooks() throws IOException {
+
 
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getClassLoader().getResource("MyBorrowedBooksPage.fxml"));
@@ -23,7 +25,7 @@ public class MyProfileController {
         Scene scene = new Scene(parent);
         MyBorrowedBooksController controller = loader.getController();
         controller.setBorrowedBooksList();
-        Stage stage = (Stage) (borrowedBooksList.getScene().getWindow());
+        Stage stage = (Stage) (borrowedBooks.getScene().getWindow());
         stage.setTitle("Borrowed Book List");
         stage.setScene(scene);
         stage.show();

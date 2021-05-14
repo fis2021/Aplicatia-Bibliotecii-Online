@@ -8,7 +8,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.MyBorrowedBooksController">
    <children>
-      <ListView layoutX="147.0" layoutY="126.0" prefHeight="204.0" prefWidth="306.0" />
+      <ListView fx:id="borrowedBooksList" layoutX="147.0" layoutY="126.0" prefHeight="204.0" prefWidth="306.0" />
       <Text layoutX="182.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My borrowed books" wrappingWidth="327.13671875">
          <font>
             <Font name="Bodoni MT Poster Compressed" size="48.0" />

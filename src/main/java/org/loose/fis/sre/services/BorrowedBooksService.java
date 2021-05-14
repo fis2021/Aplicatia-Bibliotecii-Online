@@ -23,6 +23,8 @@ public class BorrowedBooksService {
 
         borrowedRepository = database.getRepository(BorrowedBook.class);
     }
+
+
     public static void addBorrowedBook(User u, Book b)
     {    BorrowedBook bb=new BorrowedBook(b, u);
 
@@ -33,8 +35,9 @@ public class BorrowedBooksService {
         }
         borrowedRepository.insert(bb);
 
-
     }
+
+
     public static boolean checkIDisUnic(UUID u) {
         Cursor<BorrowedBook> cursor = borrowedRepository.find();
         for (BorrowedBook book : cursor) {
