@@ -61,12 +61,12 @@ public class ViewBookControllerClient implements Initializable {
 
     public void handleBorrow()
     {
-
-            BorrowedBooksService.addBorrowedBook(LoggedUser.loggedUser, ClickedBook.selectedBook);
-            borrowButton.setDisable(true);
-            borrowMessage.setText("Carte împrumutată cu succes");
-            ClickedBook.selectedBook.decrementNrBook();
-
+          borrowButton.setOnAction(e->borrowButton.onMouseClickedProperty()); {
+        BorrowedBooksService.addBorrowedBook(LoggedUser.loggedUser, ClickedBook.selectedBook);
+        borrowButton.setDisable(true);
+        borrowMessage.setText("Carte împrumutată cu succes");
+        ClickedBook.selectedBook.decrementNrBook();
+    }
     }
 
 

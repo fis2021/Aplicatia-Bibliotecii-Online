@@ -33,7 +33,7 @@
             </Text>
          </children>
       </Pane>
-      <Button layoutX="1445.0" layoutY="324.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="340.0" styleClass="bt" stylesheets="@buttons.css" text="Borrowed books" textAlignment="CENTER">
+      <Button fx:id="borrowedButton" layoutX="1445.0" layoutY="330.0" onMouseClicked="#handleBorrowButton" mnemonicParsing="false" prefHeight="69.0" prefWidth="340.0" styleClass="bt" stylesheets="@buttons.css" text="Borrowed books" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>

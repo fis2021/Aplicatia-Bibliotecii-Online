@@ -36,6 +36,8 @@ public class AdminController implements Initializable {
     private ImageView imgView;
     @FXML
     private Button outButton;
+    @FXML
+    private Button borrowedButton;
     private Book currentBook;
     public void handleAddBook() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("add_book.fxml"));
@@ -149,6 +151,18 @@ public class AdminController implements Initializable {
         };
         thread.start();
 
+    }
+    public void handleBorrowButton() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("allclients.fxml"));
+        Stage scene= (Stage) borrowedButton.getScene().getWindow();
+        scene.setScene(new Scene(root,725,490));
+        scene.setResizable(false);
+        scene.setMinHeight(1080);
+        scene.setMinWidth(1920);
+        scene.setMaxHeight(1080);
+        scene.setMaxWidth(1920);
+        scene.setTitle("All Clients");
+        scene.setFullScreen(true);
     }
 
 }
