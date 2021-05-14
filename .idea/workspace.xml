@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="317b3f21-e1f6-465f-8c38-7745f2defdca" name="Default Changelist" comment="Merge remote-tracking branch 'origin/AB-1' into Project_Merge&#10;&#10;# Conflicts:&#10;#&#9;pom.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javafx/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/javafx/SystemInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/client_main_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/client_main_page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/javafx/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/javafx/SystemInfo.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,19 +56,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -84,6 +72,8 @@
       <updated>1617608314290</updated>
       <workItem from="1617608315517" duration="1265000" />
       <workItem from="1620505984885" duration="474000" />
+      <workItem from="1620949286676" duration="1199000" />
+      <workItem from="1620951080586" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/AB-1' into Project_Merge&#10;&#10;# Conflicts:&#10;#&#9;pom.xml">
       <created>1620505132335</created>

@@ -30,10 +30,22 @@ public class ClientController implements Initializable {
     @FXML
     Text labelMain;
     @FXML
+    Button profileButton;
+    @FXML
     private ImageView imgView;
     private Book currentBook;
     @FXML
     private Button outButton;
+
+    public void handleProfile() throws IOException
+    {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("MyProfilePage.fxml"));
+        Stage scene= (Stage) profileButton.getScene().getWindow();
+        scene.setScene(new Scene(root,500,500));
+
+    }
+
+
     public void handleImg() throws IOException {
         ClickedBook.selectedBook=currentBook;
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("book.fxml"));
