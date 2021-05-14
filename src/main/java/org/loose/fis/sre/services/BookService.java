@@ -55,11 +55,11 @@ public class BookService {
         }
     }
 
-    public static void checkBookExistInLibrary(String bookName,String a,String g,String l,String c) throws BookDoesNotExistInLibrary {
+    public static void checkBookExistInLibrary(String bookName,String a,String g, String l,String c) throws BookDoesNotExistInLibrary {
 
         int sw = 0;
         for (Book book : bookRepository.find()) {
-            if (Objects.equals(bookName, book.getTitlu()) && Objects.equals(book.getAutor(),a) && Objects.equals(book.getGen_literar(),g) &&  Objects.equals(book.getLimba(),l) && Objects.equals(book.getAutor(),a)     ) {
+            if (Objects.equals(bookName, book.getTitlu()) && Objects.equals(book.getAutor(),a) && Objects.equals(book.getGen_literar(),g) &&  Objects.equals(book.getLimba(),l) && Objects.equals(book.getDom_stiintific(),c)     ) {
                 sw = 1;
             }
         }

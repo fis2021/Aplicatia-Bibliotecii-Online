@@ -44,12 +44,27 @@ public class SearchBookController  {
     GridPane grid;
 
 
+
     public void handleSearch() throws IOException {
 
         try {
-            BookService.checkBookExistInLibrary(Title.getText(), Author.getText(), Genre.getText(), Language.getText(), Category.getText());
+            BookService.checkBookExistInLibrary(Title.getText(),Author.getText(), Genre.getText(), Language.getText(), Category.getText());
+            for (Book book : BookService.bookRepository.find()) {
+                if (Title.getText().equals(book.getTitlu()) && Author.getText().equals(book.getAutor()) && Genre.getText().equals(book.getGen_literar()) && Language.getText().equals(book.getLimba()) && Category.getText().equals(book.getDom_stiintific()) ) {
+                 ClickedBook.selectedBook=book;
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("book.fxml"));
+            Stage scene= (Stage) searchBook.getScene().getWindow();
+            scene.setScene(new Scene(root,1920,1080));
+            scene.setResizable(false);
+            scene.setMinHeight(1080);
+            scene.setMinWidth(1920);
+            scene.setMaxHeight(1080);
+            scene.setMaxWidth(1920);
+            scene.setTitle("Book");
+            scene.setFullScreen(true);
+        }}}
 
-        } catch (BookDoesNotExistInLibrary e) { bookMessage.setText(e.getMessage());
+                catch (BookDoesNotExistInLibrary e) { bookMessage.setText(e.getMessage());
         }
 
 
