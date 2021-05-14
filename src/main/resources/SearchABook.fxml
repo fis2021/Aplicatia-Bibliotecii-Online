@@ -40,5 +40,9 @@
          <font>
             <Font name="Broadway" size="13.0" />
          </font></Label>
+      <Button fx:id="backButton" layoutX="500.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleback" prefHeight="80.0" prefWidth="90.0" text="Go Back  " >
+
+      </Button>
+
    </children>
 </AnchorPane>

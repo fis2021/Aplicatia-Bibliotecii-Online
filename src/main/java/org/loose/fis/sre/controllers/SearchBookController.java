@@ -41,8 +41,17 @@ public class SearchBookController  {
     @FXML
     Label bookMessage;
     @FXML
-    GridPane grid;
+    Button backButton;
 
+   public void handleback() throws IOException
+   {
+       Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_main_page.fxml"));
+       Stage scene= (Stage) backButton.getScene().getWindow();
+       scene.setScene(new Scene(root,500,500));
+
+
+
+   }
 
 
     public void handleSearch() throws IOException {
