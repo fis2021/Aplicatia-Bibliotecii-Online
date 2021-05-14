@@ -1,5 +1,6 @@
 package org.loose.fis.sre.controllers;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -106,6 +107,10 @@ public class AddBookController implements Initializable{
                 bookMessage.setText("You must complete all the fields!");
             }
 
+    }
+    @FXML
+    public void exitApplication(ActionEvent event) {
+        Platform.exit();
     }
 
     }

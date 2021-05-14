@@ -1,5 +1,7 @@
 package org.loose.fis.sre.controllers;
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -43,6 +45,9 @@ public class ViewBookControllerAdmin implements Initializable {
         genText.setText(ClickedBook.selectedBook.getGen_literar());
 
     }
-
+    @FXML
+    public void exitApplication(ActionEvent event) {
+        Platform.exit();
+    }
 
 }
