@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 
 import static org.loose.fis.sre.services.BorrowedBooksService.ALready3Books;
 
-public class ViewBookController implements Initializable {
+public class ViewBookControllerClient implements Initializable {
      @FXML
      private ImageView imgView;
      @FXML

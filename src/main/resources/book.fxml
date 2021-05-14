@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFFACD;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ViewBookController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFFACD;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ViewBookControllerClient">
    <children>
       <ImageView fx:id="imgView" fitHeight="776.0" fitWidth="712.0" layoutX="21.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
       <Text fx:id="titluText" layoutX="933.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="514.0">
@@ -50,7 +50,7 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Button fx:id="borrowButton" onMouseClicked="#handleBorrow" layoutX="187.0" layoutY="890.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="263.0" style="-fx-background-color: green;" styleClass="bt" stylesheets="@buttons.css" text="Borrow me" textAlignment="CENTER" textFill="#e10808">
+      <Button fx:id="borrowButton" layoutX="187.0" layoutY="890.0" mnemonicParsing="false" onAction="#handleBorrow" prefHeight="79.0" prefWidth="263.0" style="-fx-background-color: green;" styleClass="bt" stylesheets="@buttons.css" text="Borrow me" textAlignment="CENTER" textFill="#e10808">
          <font>
             <Font name="Book Antiqua" size="22.0" />
          </font>

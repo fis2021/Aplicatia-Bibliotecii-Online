@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -31,6 +32,8 @@ public class ClientController implements Initializable {
     @FXML
     private ImageView imgView;
     private Book currentBook;
+    @FXML
+    private Button outButton;
     public void handleImg() throws IOException {
         ClickedBook.selectedBook=currentBook;
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("book.fxml"));
@@ -120,5 +123,16 @@ public class ClientController implements Initializable {
 
     }
 
-
+    public void handleOut() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+        Stage scene= (Stage) outButton.getScene().getWindow();
+        scene.setScene(new Scene(root,725,490));
+        scene.setResizable(false);
+        scene.setMinHeight(490);
+        scene.setMinWidth(725);
+        scene.setMaxHeight(490);
+        scene.setMaxWidth(725);
+        scene.setTitle("Welcome");
+        scene.setFullScreen(false);
+    }
 }

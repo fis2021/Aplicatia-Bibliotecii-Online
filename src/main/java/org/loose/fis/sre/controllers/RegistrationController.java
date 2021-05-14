@@ -60,5 +60,6 @@ public class RegistrationController {
        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
        Stage scene= (Stage) logButton.getScene().getWindow();
         scene.setScene(new Scene(root,725,490));
+
     }
 }
