@@ -55,6 +55,10 @@
             <Font name="Book Antiqua" size="22.0" />
          </font>
       </Button>
+      <Button fx:id="gobackbutton" layoutX="500.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleback" prefHeight="32.0" prefWidth="78.0" text="Go Back  " >
+
+      </Button>
+
       <Text fx:id="borrowMessage" fill="#fc0303" layoutX="198.0" layoutY="1044.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="240.1181640625">
          <font>
             <Font size="25.0" />
