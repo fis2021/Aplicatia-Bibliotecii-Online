@@ -1,5 +1,7 @@
 package org.loose.fis.sre.controllers;
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -61,5 +63,9 @@ public class RegistrationController {
        Stage scene= (Stage) logButton.getScene().getWindow();
         scene.setScene(new Scene(root,725,490));
 
+    }
+    @FXML
+    public void exitApplication(ActionEvent event) {
+        Platform.exit();
     }
 }
