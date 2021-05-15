@@ -91,7 +91,7 @@ public class AllClientsController implements Initializable {
                          root = FXMLLoader.load(getClass().getClassLoader().getResource("client_books.fxml"));
 
                     } catch (IOException e) {
-                        e.printStackTrace();
+//                        e.printStackTrace();
                     }
                     Stage scene= (Stage) row.getScene().getWindow();
                     scene.setScene(new Scene(root,1920,1080));
@@ -101,7 +101,6 @@ public class AllClientsController implements Initializable {
                     scene.setMaxHeight(1080);
                     scene.setMaxWidth(1920);
                     scene.setTitle("Client and his books");
-
                     scene.setFullScreen(true);
 
 

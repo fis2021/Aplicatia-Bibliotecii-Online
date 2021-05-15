@@ -14,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.loose.fis.sre.model.ClickedBook;
+import org.loose.fis.sre.model.LatestOrClient;
 
 
 import java.io.IOException;
@@ -36,6 +37,8 @@ public class ViewBookControllerAdmin implements Initializable {
     private Text genText;
     @FXML
     private Button backButton;
+    @FXML
+    private Button bcButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -50,7 +53,7 @@ public class ViewBookControllerAdmin implements Initializable {
 
     }
     public void handleback() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("client_main_page.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("admin_main_page.fxml"));
         Stage scene= (Stage) backButton.getScene().getWindow();
         scene.setScene(new Scene(root,1920,1080));
         scene.setResizable(false);
@@ -60,6 +63,25 @@ public class ViewBookControllerAdmin implements Initializable {
         scene.setMaxWidth(1920);
         scene.setTitle("Admin");
         scene.setFullScreen(true);
+
+    }
+    public void handleBack() throws IOException {
+        if(LatestOrClient.client==true)
+            bcButton.setVisible(true);
+        else
+            bcButton.setVisible(false);
+        if(LatestOrClient.client==true){
+            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("client_books.fxml"));
+            Stage scene = (Stage) bcButton.getScene().getWindow();
+            scene.setScene(new Scene(root,1920,1080));
+            scene.setResizable(false);
+            scene.setMinHeight(1080);
+            scene.setMinWidth(1920);
+            scene.setMaxHeight(1080);
+            scene.setMaxWidth(1920);
+            scene.setTitle("Client and his books");
+            scene.setFullScreen(true);}
+
     }
     @FXML
     public void exitApplication(ActionEvent event) {

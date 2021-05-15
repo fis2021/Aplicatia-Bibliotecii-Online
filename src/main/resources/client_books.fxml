@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ClientBooksController">
    <children>
-      <ScrollPane prefHeight="304.0" prefWidth="1916.0">
+      <ScrollPane layoutY="174.0" prefHeight="330.0" prefWidth="1922.0">
          <content>
-            <HBox fx:id="noreturned" prefHeight="392.0" prefWidth="1920.0" />
+            <HBox fx:id="noreturned" prefHeight="392.0" prefWidth="1940.0" />
          </content>
       </ScrollPane>
+      <Label layoutX="66.0" layoutY="40.0" prefHeight="95.0" prefWidth="478.0" text="Not returned">
+         <font>
+            <Font name="Bernard MT Condensed" size="46.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="-3.0" layoutY="766.0" prefHeight="314.0" prefWidth="1922.0">
+         <content>
+            <HBox fx:id="rtrn" prefHeight="318.0" prefWidth="1908.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="63.0" layoutY="588.0" prefHeight="95.0" prefWidth="478.0" text="Returned">
+         <font>
+            <Font name="Bernard MT Condensed" size="46.0" />
+         </font>
+      </Label>
+      <Button fx:id="bcButton" layoutX="1747.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#handleback" prefHeight="67.0" prefWidth="124.0" styleClass="bt" stylesheets="@buttons.css" text="Go back">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

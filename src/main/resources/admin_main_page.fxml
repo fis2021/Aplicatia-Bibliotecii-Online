@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -19,21 +20,41 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Button>
-      <Pane layoutX="-1.0" layoutY="443.0" prefHeight="639.0" prefWidth="689.0" style="-fx-border-color: white;">
+      <Pane layoutX="-1.0" layoutY="593.0" prefHeight="489.0" prefWidth="723.0" style="-fx-border-color: white;">
          <children>
-            <Text fill="WHITE" layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="!Welcome to the books world! " wrappingWidth="494.7825927734375">
+            <ImageView fitHeight="211.0" fitWidth="650.0" layoutX="1.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/readmore.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="363.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tips to read more books" textAlignment="CENTER" underline="true">
                <font>
-                  <Font name="System Bold" size="34.0" />
+                  <Font name="Century Schoolbook" size="28.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="42.0" layoutY="645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact: purcar.iasminamaria@yahoo.com par.tania@yahoo.com" wrappingWidth="593.3370361328125">
+            <Text fill="WHITE" layoutX="295.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Be better than Spiderman, be a Bookman!" textAlignment="CENTER" wrappingWidth="464.27734375">
                <font>
-                  <Font name="System Bold" size="37.0" />
+                  <Font name="System Bold Italic" size="26.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="47.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.Schedule Your Reading Sessions" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="37.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.Make Reading A Morning Routine Habit" textAlignment="CENTER" wrappingWidth="624.96484375">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="43.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.Carry A Book With You" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
                </font>
             </Text>
          </children>
       </Pane>
-      <Button fx:id="borrowedButton" layoutX="1445.0" layoutY="330.0" onMouseClicked="#handleBorrowButton" mnemonicParsing="false" prefHeight="69.0" prefWidth="340.0" styleClass="bt" stylesheets="@buttons.css" text="Borrowed books" textAlignment="CENTER">
+      <Button fx:id="borrowedButton" layoutX="1445.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#handleBorrowButton" prefHeight="69.0" prefWidth="340.0" styleClass="bt" stylesheets="@buttons.css" text="Borrowed books" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>

@@ -20,6 +20,6 @@
       </TableView>
       <TextField fx:id="sField" layoutX="232.0" layoutY="84.0" prefHeight="38.0" prefWidth="668.0" promptText="Enter the name" />
       <Label layoutX="126.0" layoutY="80.0" prefHeight="44.0" prefWidth="142.0" text="Search" />
-      <Button fx:id="backButton" layoutX="1688.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#handleback" prefHeight="93.0" prefWidth="164.0" styleClass="bt" stylesheets="@buttons.css" text="Go back" />
+      <Button fx:id="backButton"  layoutX="1688.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#handleback" prefHeight="93.0" prefWidth="164.0" styleClass="bt" stylesheets="@buttons.css" text="Go back" />
    </children>
 </AnchorPane>

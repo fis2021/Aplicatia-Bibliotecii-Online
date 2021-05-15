@@ -9,26 +9,26 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootElement" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AddBookController">
+<AnchorPane fx:id="rootElement" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="730.0" style="-fx-background-color: beige;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AddBookController">
    <children>
-      <ComboBox fx:id="LanguageBox" layoutX="65.0" layoutY="170.0" prefWidth="150.0" promptText="Limba" />
-      <TextField fx:id="titluField" layoutX="65.0" layoutY="54.0" prefHeight="25.0" prefWidth="290.0" promptText="Titlu" />
-      <TextField fx:id="autorField" layoutX="65.0" layoutY="112.0" prefHeight="25.0" prefWidth="290.0" promptText="Autor" />
-      <Button fx:id="selectFileButton" layoutX="65.0" layoutY="352.0" mnemonicParsing="false" onAction="#selectFileAction" prefHeight="25.0" prefWidth="107.0" text="Adaugă poză" />
+      <ComboBox fx:id="LanguageBox" layoutX="65.0" layoutY="170.0" prefWidth="150.0" promptText="Limba" styleClass="bt" stylesheets="@buttons.css" />
+      <TextField fx:id="titluField" layoutX="65.0" layoutY="54.0" prefHeight="25.0" prefWidth="290.0" promptText="Titlu" style="-fx-border-color: red;" />
+      <TextField fx:id="autorField" layoutX="65.0" layoutY="112.0" prefHeight="25.0" prefWidth="290.0" promptText="Autor" style="-fx-border-color: red;" />
+      <Button fx:id="selectFileButton" layoutX="65.0" layoutY="352.0" mnemonicParsing="false" onAction="#selectFileAction" prefHeight="25.0" prefWidth="107.0" styleClass="bt" stylesheets="@buttons.css" text="Adaugă poză" />
       <ImageView fx:id="bookImage" fitHeight="150.0" fitWidth="200.0" layoutX="483.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" />
-      <TextField fx:id="domField" layoutX="65.0" layoutY="290.0" prefHeight="25.0" prefWidth="290.0" promptText="Categorie" />
-      <ComboBox fx:id="literarBox" layoutX="65.0" layoutY="229.0" prefWidth="150.0" promptText="Gen literar" />
-      <TextArea fx:id="descrArea" layoutX="483.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0" promptText="Descrierea cărții" />
-      <Button fx:id="addButton" layoutX="230.0" layoutY="482.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="25.0" prefWidth="269.0" text="Add book" />
+      <TextField fx:id="domField" layoutX="65.0" layoutY="290.0" prefHeight="25.0" prefWidth="290.0" promptText="Categorie" style="-fx-border-color: red;" />
+      <ComboBox fx:id="literarBox" layoutX="65.0" layoutY="229.0" prefWidth="150.0" promptText="Gen literar" styleClass="bt" stylesheets="@buttons.css" />
+      <TextArea fx:id="descrArea" layoutX="483.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0" promptText="Descrierea cărții" style="-fx-border-color: red;" />
+      <Button fx:id="addButton" layoutX="230.0" layoutY="482.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="25.0" prefWidth="269.0" styleClass="bt" stylesheets="@buttons.css" text="Add book" />
       <Text fx:id="bookMessage" fill="RED" layoutX="140.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="505.13671875">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font></Text>
-      <Button fx:id="stocButton" layoutX="483.0" layoutY="633.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="25.0" prefWidth="129.0" text="Mărește stocul" />
+      <Button fx:id="stocButton" layoutX="483.0" layoutY="633.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="25.0" prefWidth="129.0" styleClass="bt" stylesheets="@buttons.css" text="Mărește stocul" />
       <Text fx:id="stocMessage" layoutX="230.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="236.0">
          <font>
             <Font size="15.0" />
          </font></Text>
-      <Button fx:id="backButton" onMouseClicked="#handleback" layoutX="653.0" layoutY="14.0" mnemonicParsing="false" text="Go back" />
+      <Button fx:id="backButton" layoutX="653.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#handleback" styleClass="bt" stylesheets="@buttons.css" text="Go back" />
    </children>
 </AnchorPane>

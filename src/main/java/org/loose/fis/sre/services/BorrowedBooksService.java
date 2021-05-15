@@ -95,15 +95,32 @@ public class BorrowedBooksService {
     {
         return isOk;
     }
-    public static ArrayList<Book> borrowedOnesForSelectedClient()
+    public static ArrayList<Book> borrowedOnesandNotReturnedForSelectedClient()
     {   String id_username= SelectedClient.selectedClient.getUsername();
         Cursor<BorrowedBook> cb=borrowedRepository.find();
         ArrayList<Book> ar=new ArrayList<Book>();
         for(BorrowedBook bc:cb)
         {
             if(bc.getU().getUsername().equals(id_username))
-            {
+            {   if(bc.isReturned()==false) {
                 ar.add(bc.getB());
+            }
+
+            }
+        }
+
+        return ar;
+    }
+    public static ArrayList<Book> borrowedOnesandReturnedForSelectedClient()
+    {   String id_username= SelectedClient.selectedClient.getUsername();
+        Cursor<BorrowedBook> cb=borrowedRepository.find();
+        ArrayList<Book> ar=new ArrayList<Book>();
+        for(BorrowedBook bc:cb)
+        {
+            if(bc.getU().getUsername().equals(id_username))
+            {   if(bc.isReturned()==true) {
+                ar.add(bc.getB());
+            }
 
             }
         }
