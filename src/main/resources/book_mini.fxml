@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="anch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.MiniBookController">
+   <children>
+      <ImageView fx:id="bookView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Text fx:id="titluText" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" />
+      <Text fx:id="autorText" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</HBox>
