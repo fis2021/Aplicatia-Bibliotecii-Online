@@ -1,13 +1,18 @@
 package org.loose.fis.sre.controllers;
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import org.loose.fis.sre.exceptions.BookDoesNotExistInLibrary;
+import org.loose.fis.sre.model.Book;
+import org.loose.fis.sre.model.ClickedBook;
+import org.loose.fis.sre.services.BookService;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class MyProfileController {
@@ -17,6 +22,9 @@ public class MyProfileController {
 
     @FXML
     Button backButton;
+
+
+
 
     public void handleback() throws IOException
     {
@@ -38,12 +46,17 @@ public class MyProfileController {
         MyBorrowedBooksController controller = loader.getController();
         controller.setBorrowedBooksList();
         Stage stage = (Stage) (borrowedBooks.getScene().getWindow());
-        stage.setTitle("Borrowed Book List");
+
         stage.setScene(scene);
         stage.show();
+
+
     }
 
 
 
-
+    @FXML
+    public void exitApplication(ActionEvent event) {
+        Platform.exit();
+    }
 }

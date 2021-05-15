@@ -38,6 +38,12 @@ public class BorrowedBooksService {
         borrowedRepository.insert(bb);
 
     }
+    public static void setasreturned(BorrowedBook b) {
+
+       b.setReturned(true);
+       borrowedRepository.update(b);
+
+    }
 
 
     public static boolean checkIDisUnic(UUID u) {

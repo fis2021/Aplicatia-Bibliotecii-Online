@@ -4,6 +4,8 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -42,6 +44,10 @@ public class ClientController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("SearchABook.fxml"));
         Stage scene= (Stage) searchBookButton.getScene().getWindow();
         scene.setScene(new Scene(root,500,500));
+        scene.setFullScreen(true);
+        scene.setResizable(false);
+        scene.setMinHeight(700);
+        scene.setMinWidth(700);
     }
 
 
@@ -50,6 +56,12 @@ public class ClientController implements Initializable {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("MyProfilePage.fxml"));
         Stage scene= (Stage) profileButton.getScene().getWindow();
         scene.setScene(new Scene(root,500,500));
+        scene.setFullScreen(true);
+        scene.setResizable(false);
+        scene.setMinHeight(700);
+        scene.setMinWidth(700);
+
+
 
     }
 
@@ -155,4 +167,10 @@ public class ClientController implements Initializable {
         scene.setTitle("Welcome");
         scene.setFullScreen(false);
     }
+    @FXML
+    public void exitApplication(ActionEvent event) {
+        Platform.exit();
+    }
+
+
 }
