@@ -1,5 +1,6 @@
 package org.loose.fis.sre.controllers;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -46,7 +47,8 @@ public class AddBookController implements Initializable{
     private Text stocMessage;
     @FXML
     private Button stocButton;
-
+    @FXML
+    private Button backButton;
     public void selectFileAction() {
 
             Stage stage = (Stage) selectFileButton.getScene().getWindow();
@@ -106,6 +108,22 @@ public class AddBookController implements Initializable{
                 bookMessage.setText("You must complete all the fields!");
             }
 
+    }
+    public void handleback() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("admin_main_page.fxml"));
+        Stage scene= (Stage) backButton.getScene().getWindow();
+        scene.setScene(new Scene(root,1920,1080));
+        scene.setResizable(false);
+        scene.setMinHeight(1080);
+        scene.setMinWidth(1920);
+        scene.setMaxHeight(1080);
+        scene.setMaxWidth(1920);
+        scene.setTitle("Admin");
+        scene.setFullScreen(true);
+    }
+    @FXML
+    public void exitApplication(ActionEvent event) {
+        Platform.exit();
     }
 
     }

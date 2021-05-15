@@ -4,18 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="317b3f21-e1f6-465f-8c38-7745f2defdca" name="Default Changelist" comment="Merge remote-tracking branch 'origin/AB-1' into Project_Merge&#10;&#10;# Conflicts:&#10;#&#9;pom.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="317b3f21-e1f6-465f-8c38-7745f2defdca" name="Default Changelist" comment="created a tableview to see all the clients and a search field">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/client_main_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/client_main_page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/javafx/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/javafx/SystemInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AddBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AddBookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AllClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AllClientsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ViewBookControllerAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ViewBookControllerAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ViewBookControllerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ViewBookControllerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/BorrowedBooksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/BorrowedBooksService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/add_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/add_book.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/allclients.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/allclients.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/book.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bookAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bookAdmin.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="AB-1" />
@@ -39,7 +51,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Proiect_FIS\BAZADEDATE\project\target\classes" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -56,8 +78,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -72,8 +108,11 @@
       <updated>1617608314290</updated>
       <workItem from="1617608315517" duration="1265000" />
       <workItem from="1620505984885" duration="474000" />
-      <workItem from="1620949286676" duration="1199000" />
-      <workItem from="1620951080586" duration="298000" />
+      <workItem from="1620744249192" duration="3493000" />
+      <workItem from="1620866199120" duration="691000" />
+      <workItem from="1620884246305" duration="6318000" />
+      <workItem from="1620901099883" duration="40640000" />
+      <workItem from="1620997776101" duration="9709000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/AB-1' into Project_Merge&#10;&#10;# Conflicts:&#10;#&#9;pom.xml">
       <created>1620505132335</created>
@@ -82,7 +121,91 @@
       <option name="project" value="LOCAL" />
       <updated>1620505132335</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="created book services and updated the add book controller">
+      <created>1620569868967</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620569868967</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updated add book controller and add book form">
+      <created>1620700221038</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620700221038</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added a button to increase the stock and his functionality">
+      <created>1620708802071</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620708802071</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added the feature to see the newest books">
+      <created>1620743738238</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620743738238</updated>
+    </task>
+    <task id="LOCAL-00006" summary="created a database to keep the borrowed books for each client">
+      <created>1620904294709</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620904294709</updated>
+    </task>
+    <task id="LOCAL-00007" summary="created a feature to see if the client meets the conditions to borrow">
+      <created>1620907229239</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620907229239</updated>
+    </task>
+    <task id="LOCAL-00008" summary="created the borrow button and its functionality, added a feature to decrement the stock of a book">
+      <created>1620910058502</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620910058502</updated>
+    </task>
+    <task id="LOCAL-00009" summary="created a feature that verifies if the book is available and updated the button's functionality">
+      <created>1620913998939</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620913998939</updated>
+    </task>
+    <task id="LOCAL-00010" summary="created a feature to show borrow button only for clients">
+      <created>1620957856239</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1620957856239</updated>
+    </task>
+    <task id="LOCAL-00011" summary="created communication between borrow button and the page of borrowed books">
+      <created>1620969159547</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1620969159547</updated>
+    </task>
+    <task id="LOCAL-00012" summary="created a tableview to see all the clients and a search field">
+      <created>1620986760870</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1620986760870</updated>
+    </task>
+    <task id="LOCAL-00013" summary="created a tableview to see all the clients and a search field">
+      <created>1620986798115</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1620986798115</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,7 +222,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Project_Merge" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -117,6 +240,21 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/AB-6" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="Project_Merge" />
                 </option>
               </RecentGroup>
@@ -129,6 +267,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge remote-tracking branch 'origin/AB-1' into Project_Merge&#10;&#10;# Conflicts:&#10;#&#9;pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/AB-1' into Project_Merge&#10;&#10;# Conflicts:&#10;#&#9;pom.xml" />
+    <MESSAGE value="created book class and created &quot;Add books&quot; button" />
+    <MESSAGE value="created book services and updated the add book controller" />
+    <MESSAGE value="updated add book controller and add book form" />
+    <MESSAGE value="added a button to increase the stock and his functionality" />
+    <MESSAGE value="added the feature to see the newest books" />
+    <MESSAGE value="created a database to keep the borrowed books for each client" />
+    <MESSAGE value="created a feature to see if the client meets the conditions to borrow" />
+    <MESSAGE value="created the borrow button and its functionality, added a feature to decrement the stock of a book" />
+    <MESSAGE value="created a feature that verifies if the book is available and updated the button's functionality" />
+    <MESSAGE value="created a feature to show borrow button only for clients" />
+    <MESSAGE value="created communication between borrow button and the page of borrowed books" />
+    <MESSAGE value="created a tableview to see all the clients and a search field" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a tableview to see all the clients and a search field" />
   </component>
 </project>

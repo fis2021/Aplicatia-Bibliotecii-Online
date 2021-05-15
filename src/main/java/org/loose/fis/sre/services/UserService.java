@@ -9,6 +9,7 @@ import org.loose.fis.sre.model.User;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -131,7 +132,15 @@ public class UserService {
          u.setisAdmin();
         userRepository.insert(u);
     }
-
+    public static ArrayList<User> AllUsers()
+    {   Cursor<User> u=userRepository.find();
+        ArrayList<User> au = new ArrayList<User>();
+        for(User us:u)
+        {   if(us.isAdmin()==false)
+        {au.add(us);}
+        }
+        return au;
+    }
 
     private static MessageDigest getMessageDigest() {
         MessageDigest md;
@@ -141,6 +150,16 @@ public class UserService {
             throw new IllegalStateException("SHA-512 does not exist!");
         }
         return md;
+    }
+  public static void deleteRecord() {
+        Cursor<User> cursor = userRepository.find();
+        for (User user : cursor) {
+           if(user.getName().equals(""))
+           {
+               userRepository.remove(user);
+           }
+
+        }
     }
 
 

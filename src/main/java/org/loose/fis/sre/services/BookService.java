@@ -3,11 +3,13 @@ package org.loose.fis.sre.services;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.Cursor;
 import org.dizitart.no2.objects.ObjectRepository;
+import org.loose.fis.sre.exceptions.BookDoesNotExistInLibrary;
 import org.loose.fis.sre.exceptions.BookExistsException;
 import org.loose.fis.sre.exceptions.UncompletedFieldsException;
 import org.loose.fis.sre.model.Book;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -53,6 +55,19 @@ public class BookService {
         }
     }
 
+    public static void checkBookExistInLibrary(String bookName,String a,String g, String l,String c) throws BookDoesNotExistInLibrary {
+
+        int sw = 0;
+        for (Book book : bookRepository.find()) {
+            if (Objects.equals(bookName, book.getTitlu()) && Objects.equals(book.getAutor(),a) && Objects.equals(book.getGen_literar(),g) &&  Objects.equals(book.getLimba(),l) && Objects.equals(book.getDom_stiintific(),c)     ) {
+                sw = 1;
+            }
+        }
+
+        if (sw == 0) {
+            throw new BookDoesNotExistInLibrary("Cartea nu exista in biblioteca");
+        }
+    }
     public static boolean checkIDisUnic(UUID u) {
         Cursor<Book> cursor = bookRepository.find();
         for (Book book : cursor) {

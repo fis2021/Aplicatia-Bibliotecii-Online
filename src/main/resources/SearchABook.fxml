@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.SearchBookController">
+   <children>
+      <Button fx:id="searchBook" layoutX="249.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="32.0" prefWidth="78.0" text="Search  " >
+
+      </Button>
+      <TextField fx:id="Title" layoutX="217.0" layoutY="104.0" prefHeight="25.0" prefWidth="142.0" promptText="Title" />
+      <TextField fx:id="Author" layoutX="217.0" layoutY="145.0" prefHeight="25.0" prefWidth="142.0" promptText="Author" />
+      <TextField fx:id="Genre" layoutX="217.0" layoutY="188.0" prefHeight="25.0" prefWidth="142.0" promptText="Genre" />
+      <TextArea layoutX="131.0" layoutY="23.0" prefHeight="32.0" prefWidth="351.0" text="Complete the formular to search a book">
+         <font>
+            <Font name="Bauhaus 93" size="18.0" />
+         </font>
+      </TextArea>
+      <ImageView fitHeight="124.0" fitWidth="217.0" layoutX="374.0" layoutY="265.0">
+         <image><![CDATA[
+            ]]><Image url="@images/Open_book.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="200.0" layoutX="-23.0" layoutY="95.0">
+         <image>
+            <Image url="@images/book rev.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="Language" layoutX="217.0" layoutY="230.0" prefHeight="25.0" prefWidth="142.0" promptText="Language" />
+      <TextField fx:id="Category" layoutX="217.0" layoutY="278.0" prefHeight="25.0" prefWidth="142.0" promptText="Category" />
+      <Label fx:id="bookMessage" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="69.0" layoutY="397.0" prefHeight="83.0" prefWidth="351.0" textAlignment="JUSTIFY" textFill="#e10808">
+         <font>
+            <Font name="Broadway" size="13.0" />
+         </font></Label>
+      <Button fx:id="backButton" layoutX="500.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleback" prefHeight="80.0" prefWidth="90.0" text="Go Back  " >
+
+      </Button>
+
+   </children>
+</AnchorPane>

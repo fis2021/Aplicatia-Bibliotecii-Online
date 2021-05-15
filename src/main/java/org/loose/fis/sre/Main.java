@@ -35,7 +35,11 @@ public class Main extends Application {
         if (!Files.exists(applicationHomePath))
             applicationHomePath.toFile().mkdirs();
     }
-
+    @Override
+    public void stop()
+    {
+        System.exit(0);
+    }
 
     public static void main(String[] args) {
         launch(args);
