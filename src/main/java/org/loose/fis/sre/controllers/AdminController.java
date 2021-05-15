@@ -39,8 +39,23 @@ public class AdminController implements Initializable {
     private Button outButton;
     @FXML
     private Button borrowedButton;
+    @FXML
+    private Button returnButton;
 
     private Book currentBook;
+
+
+    public void handleReturnBook() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ReturnABook.fxml"));
+        Stage scene= (Stage) returnButton.getScene().getWindow();
+        scene.setTitle("Return book");
+        scene.setScene(new Scene(root,500,500));
+        scene.setFullScreen(true);
+        scene.setResizable(false);
+        scene.setMinHeight(700);
+        scene.setMinWidth(700);
+    }
+
     public void handleAddBook() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("add_book.fxml"));
         Stage scene= (Stage) addBookButton.getScene().getWindow();
