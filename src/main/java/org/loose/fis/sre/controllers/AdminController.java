@@ -168,7 +168,7 @@ public class AdminController implements Initializable {
         scene.setMaxHeight(1080);
         scene.setMaxWidth(1920);
         scene.setTitle("All Clients");
-        //scene.setFullScreen(true);
+        scene.setFullScreen(true);
 
     }
     @FXML
