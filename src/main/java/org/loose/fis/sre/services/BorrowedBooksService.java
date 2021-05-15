@@ -6,8 +6,10 @@ import org.dizitart.no2.objects.Cursor;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.sre.model.Book;
 import org.loose.fis.sre.model.BorrowedBook;
+import org.loose.fis.sre.model.SelectedClient;
 import org.loose.fis.sre.model.User;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 import static org.loose.fis.sre.services.FileSystemService.getPathToFile;
@@ -92,6 +94,21 @@ public class BorrowedBooksService {
     public static boolean getOk()
     {
         return isOk;
+    }
+    public static ArrayList<Book> borrowedOnesForSelectedClient()
+    {   String id_username= SelectedClient.selectedClient.getUsername();
+        Cursor<BorrowedBook> cb=borrowedRepository.find();
+        ArrayList<Book> ar=new ArrayList<Book>();
+        for(BorrowedBook bc:cb)
+        {
+            if(bc.getU().getUsername().equals(id_username))
+            {
+                ar.add(bc.getB());
+
+            }
+        }
+
+        return ar;
     }
 
 

@@ -9,16 +9,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: beige;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AllClientsController">
    <children>
-      <TableView fx:id="tableView" layoutX="127.0" layoutY="185.0" prefHeight="858.0" prefWidth="1275.0">
+      <TableView fx:id="tableView" layoutX="127.0" layoutY="185.0" prefHeight="858.0" prefWidth="1636.0">
         <columns>
-          <TableColumn fx:id="nameCl" prefWidth="315.33331298828125" text="Name" />
-          <TableColumn fx:id="emailCl" minWidth="0.0" prefWidth="325.66668701171875" text="Email" />
+          <TableColumn fx:id="usernameCl" prefWidth="315.33331298828125" text="Username" />
+          <TableColumn fx:id="nameCl" minWidth="0.0" prefWidth="325.66668701171875" text="Name" />
+            <TableColumn fx:id="emailCl" prefWidth="315.33331298828125" text="Email" />
             <TableColumn fx:id="phoneCl" prefWidth="315.33331298828125" text="Phone" />
             <TableColumn fx:id="addressCl" prefWidth="315.33331298828125" text="Address" />
         </columns>
       </TableView>
       <TextField fx:id="sField" layoutX="232.0" layoutY="84.0" prefHeight="38.0" prefWidth="668.0" promptText="Enter the name" />
       <Label layoutX="126.0" layoutY="80.0" prefHeight="44.0" prefWidth="142.0" text="Search" />
-      <Button fx:id="backButton"  onMouseClicked="#handleback" layoutX="1729.0" layoutY="955.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="164.0" styleClass="bt" stylesheets="@buttons.css" text="Go back" />
+      <Button fx:id="backButton" layoutX="1688.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#handleback" prefHeight="93.0" prefWidth="164.0" styleClass="bt" stylesheets="@buttons.css" text="Go back" />
    </children>
 </AnchorPane>

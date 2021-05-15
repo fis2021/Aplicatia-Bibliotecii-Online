@@ -17,6 +17,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.loose.fis.sre.model.Client;
+import org.loose.fis.sre.model.SelectedClient;
 import org.loose.fis.sre.model.User;
 import org.loose.fis.sre.services.UserService;
 
@@ -31,6 +32,8 @@ public class AllClientsController implements Initializable {
     private TextField sField;
     @FXML
     private TableView <Client> tableView;
+    @FXML
+    private TableColumn<Client,String> usernameCl;
     @FXML
     private TableColumn<Client,String> nameCl;
     @FXML
@@ -48,6 +51,7 @@ public class AllClientsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        usernameCl.setCellValueFactory(new PropertyValueFactory<>("username"));
         nameCl.setCellValueFactory(new PropertyValueFactory<>("name"));
         emailCl.setCellValueFactory(new PropertyValueFactory<>("email"));
         phoneCl.setCellValueFactory(new PropertyValueFactory<>("phone"));
@@ -55,7 +59,7 @@ public class AllClientsController implements Initializable {
         ArrayList<User> ar=UserService.AllUsers();
         for(User u:ar)
         {
-            usersList.add(new Client(u.getName(),u.getEmail(),u.getPhone(),u.getAddress()));
+            usersList.add(new Client(u.getUsername(),u.getName(),u.getEmail(),u.getPhone(),u.getAddress()));
         }
         tableView.setItems(usersList);
 
@@ -81,8 +85,11 @@ public class AllClientsController implements Initializable {
             row.setOnMouseClicked(event -> {
                 if (event.getClickCount() == 2 && (! row.isEmpty()) ) {
                     Client rowData = row.getItem();
+                    SelectedClient.selectedClient=rowData;
                     Parent root=null;
-                    try { root = FXMLLoader.load(getClass().getClassLoader().getResource("client_books.fxml"));
+                    try {
+                         root = FXMLLoader.load(getClass().getClassLoader().getResource("client_books.fxml"));
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -94,7 +101,9 @@ public class AllClientsController implements Initializable {
                     scene.setMaxHeight(1080);
                     scene.setMaxWidth(1920);
                     scene.setTitle("Client and his books");
+
                     scene.setFullScreen(true);
+
 
                 }
             });

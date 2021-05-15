@@ -18,7 +18,7 @@
       <ImageView fx:id="bookImage" fitHeight="150.0" fitWidth="200.0" layoutX="483.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" />
       <TextField fx:id="domField" layoutX="65.0" layoutY="290.0" prefHeight="25.0" prefWidth="290.0" promptText="Categorie" />
       <ComboBox fx:id="literarBox" layoutX="65.0" layoutY="229.0" prefWidth="150.0" promptText="Gen literar" />
-      <TextArea fx:id="descrArea" layoutX="483.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" promptText="Descrierea cărții" />
+      <TextArea fx:id="descrArea" layoutX="483.0" layoutY="70.0" prefHeight="200.0" prefWidth="200.0" promptText="Descrierea cărții" />
       <Button fx:id="addButton" layoutX="230.0" layoutY="482.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="25.0" prefWidth="269.0" text="Add book" />
       <Text fx:id="bookMessage" fill="RED" layoutX="140.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="505.13671875">
          <font>
@@ -29,5 +29,6 @@
          <font>
             <Font size="15.0" />
          </font></Text>
+      <Button fx:id="backButton" onMouseClicked="#handleback" layoutX="653.0" layoutY="14.0" mnemonicParsing="false" text="Go back" />
    </children>
 </AnchorPane>
