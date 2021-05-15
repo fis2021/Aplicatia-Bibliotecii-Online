@@ -36,6 +36,14 @@ public class ClientController implements Initializable {
     private Book currentBook;
     @FXML
     private Button outButton;
+    @FXML
+    Button searchBookButton;
+    public void handleSearchAction() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("SearchABook.fxml"));
+        Stage scene= (Stage) searchBookButton.getScene().getWindow();
+        scene.setScene(new Scene(root,500,500));
+    }
+
 
     public void handleProfile() throws IOException
     {
