@@ -42,7 +42,7 @@ public class MyBorrowedBooksController {
         String aux;
         ObservableList<String> items = FXCollections.observableArrayList();
         for (BorrowedBook book : BorrowedBooksService.borrowedRepository.find()) {
-            if (LoggedUser.loggedUser.equals(book.getU()) ) {
+            if (LoggedUser.loggedUser.equals(book.getU()) && book.isReturned()==false ) {
                 aux = book.getB().getTitlu() +" de "+ book.getB().getAutor() ;
                 items.add(aux);
                 borrowedBooksList.setItems(items);
