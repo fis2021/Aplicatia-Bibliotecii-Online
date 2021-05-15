@@ -52,7 +52,7 @@
             <Font name="Century Schoolbook" size="58.0" />
          </font>
       </Text>
-      <Button layoutX="1628.0" layoutY="6.0" mnemonicParsing="false" prefHeight="117.0" prefWidth="284.0" styleClass="bt" stylesheets="@buttons.css" text="My profile" textAlignment="CENTER">
+      <Button fx:id="profileButton" layoutX="1628.0" layoutY="6.0" mnemonicParsing="false"  onAction="#handleProfile" prefHeight="117.0" prefWidth="284.0" styleClass="bt" stylesheets="@buttons.css" text="My profile" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="project" />
         <module name="javafx-mv" />
+        <module name="bOOKsTORE" />
       </profile>
     </annotationProcessing>
   </component>

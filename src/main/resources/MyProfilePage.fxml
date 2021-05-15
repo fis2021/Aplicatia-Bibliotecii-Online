@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.MyProfileController">
+   <children>
+      <TextArea editable="false" layoutX="268.0" layoutY="14.0" prefHeight="77.0" prefWidth="200.0" text=" My profile">
+         <font>
+            <Font name="Bernard MT Condensed" size="36.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.8684210777282715" green="0.22615131735801697" blue="0.012061403132975101" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </TextArea>
+      <Button fx:id="borrowedBooks" layoutX="375.0" layoutY="179.0" mnemonicParsing="false" onAction="#handleSeeListOfBorrowedBooks" prefHeight="42.0" prefWidth="146.0" text="My borrowed books" textFill="#7a2525" underline="true" />
+      <ImageView fitHeight="140.0" fitWidth="240.0" layoutX="328.0" layoutY="246.0">
+         <image>
+            <Image url="@images/_methode_times_prod_web_bin_eb0d0988-2f4f-11eb-8bd6-64d3c9126a9b.png" />
+         </image>
+         <effect>
+            <SepiaTone>
+               <input>
+                  <DropShadow />
+               </input>
+            </SepiaTone>
+         </effect>
+      </ImageView>
+      <Button fx:id="backButton" layoutX="43.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleback" prefHeight="35.0" prefWidth="79.0" text="Go back" textFill="#8a3d3d" />
+      <ImageView fitHeight="113.0" fitWidth="188.0" layoutX="14.0" layoutY="14.0">
+         <image>
+            <Image url="@images/Bookclub.jpg" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+      </ImageView>
+   </children>
+</Pane>
