@@ -4,10 +4,7 @@ package org.loose.fis.sre.services;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.Cursor;
 import org.dizitart.no2.objects.ObjectRepository;
-import org.loose.fis.sre.model.Book;
-import org.loose.fis.sre.model.BorrowedBook;
-import org.loose.fis.sre.model.SelectedClient;
-import org.loose.fis.sre.model.User;
+import org.loose.fis.sre.model.*;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -44,6 +41,25 @@ public class BorrowedBooksService {
        borrowedRepository.update(b);
 
     }
+    public static void setasreturnedd(Book b,Client c) {
+
+        String id_username= SelectedClient.selectedClient.getUsername();
+        Cursor<BorrowedBook> cb=borrowedRepository.find();
+
+        for(BorrowedBook bc:cb) {
+            if (b.getBook_id().equals(bc.getB().getBook_id())) {
+                System.out.println("Am fost aici");
+                if (bc.getU().getUsername().equals(id_username)) {
+                    System.out.println("Am fost aici2");
+                    bc.setReturned(true);
+                    borrowedRepository.update(bc);
+                }
+
+            }
+        }
+        }
+
+
 
 
     public static boolean checkIDisUnic(UUID u) {

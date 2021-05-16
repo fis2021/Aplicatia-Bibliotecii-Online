@@ -71,7 +71,7 @@ public class ClientBooksController implements Initializable  {
                    fxmlLoader.setLocation(getClass().getClassLoader().getResource("book_mini.fxml"));
                    HBox anch=fxmlLoader.load();
                    MiniBookController miniBookController=fxmlLoader.getController();
-                   miniBookController.setData(a.get(i),myListener);
+                   miniBookController.setData(b.get(i),myListener);
                    rtrn.getChildren().add(anch);
                }
            } catch (Exception e) {
