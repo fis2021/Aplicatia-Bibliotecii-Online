@@ -9,6 +9,7 @@ import org.loose.fis.sre.exceptions.UncompletedFieldsException;
 import org.loose.fis.sre.model.Book;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.regex.Matcher;
@@ -19,10 +20,10 @@ import static org.loose.fis.sre.services.FileSystemService.getPathToFile;
 public class BookService {
     public static ObjectRepository<Book> bookRepository;
 
-
+    private static Nitrite database;
     public static void initDatabase() {
 
-            Nitrite database = Nitrite.builder()
+             database = Nitrite.builder()
                 .filePath(getPathToFile("books.db").toFile())
                 .openOrCreate("biblioteca", "biblioteca");
 
@@ -133,17 +134,17 @@ public class BookService {
 
 
     }
-   /* public static void deleteRecord() {
+   public static void deleteRecord(String t) {
         Cursor<Book> cursor = bookRepository.find();
         int cnt=0;
         for (Book book : cursor) {
-           if(book.getTitlu().equals("t"))
+           if(book.getTitlu().equals(t))
            {
                bookRepository.remove(book);
            }
 
         }
-    }*/
+    }
    public static ArrayList<Book> getLast() {
        Cursor<Book> cursor = bookRepository.find();
        ArrayList<Book> a=new ArrayList<Book>();
@@ -167,5 +168,12 @@ public class BookService {
        return a;
 
    }
+   public static List<Book> getAllBooks()
+   {return bookRepository.find().toList();
 
+   }
+    public static void closeDatabase()
+    {
+        database.close();
+    }
 }

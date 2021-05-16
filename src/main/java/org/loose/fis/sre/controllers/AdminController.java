@@ -42,7 +42,7 @@ public class AdminController implements Initializable {
     @FXML
     private Button returnButton;
 
-    private Book currentBook;
+    public static Book currentBook;
 
 
     public void handleReturnBook() throws IOException {
@@ -146,18 +146,20 @@ public class AdminController implements Initializable {
                 messages[3] = "“There is no friend as loyal as a book”";
                 Image[]img=new Image[3];
                 ArrayList<Book> a=getLast();
+                if(a.size()==3){
                 img[0]= new Image(a.get(0).getPhoto_path());
                 img[1]=new Image(a.get(1).getPhoto_path());
-                img[2]=new Image(a.get(2).getPhoto_path());
+                img[2]=new Image(a.get(2).getPhoto_path());}
                 int cnt=0;
                 while (true) {
                     Random rand = new Random();
                     labelMain.setText(messages[rand.nextInt(messages.length)]);
+                    if(a.size()==3){
                     imgView.setImage(img[cnt]);
                     currentBook=a.get(cnt);
                     cnt++;
                     if(cnt==3)
-                        cnt=0;
+                        cnt=0;}
 
                     try {
                         Thread.sleep(10000);

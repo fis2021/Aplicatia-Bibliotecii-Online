@@ -12,29 +12,23 @@ import org.loose.fis.sre.services.UserService;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-
+import java.nio.file.Paths;
 
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        initDirectory();
         UserService.initDatabase();
         BookService.initDatabase();
         BorrowedBooksService.initDatabase();
-       // UserService.addAdmin("iasmina","Iasmina","Purcar Iasmina","iasmina@yahoo.com","Dobra","0739213");
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
         primaryStage.setTitle("Welcome");
         primaryStage.setScene(new Scene(root, 725, 490));
         primaryStage.show();
     }
 
-    private void initDirectory() {
-        Path applicationHomePath = FileSystemService.APPLICATION_HOME_PATH;
-        if (!Files.exists(applicationHomePath))
-            applicationHomePath.toFile().mkdirs();
-    }
+
     @Override
     public void stop()
     {

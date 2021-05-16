@@ -10,6 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -21,14 +22,16 @@ public class UserService {
 
     public static ObjectRepository<User> userRepository;
 
-
+    private static Nitrite database;
     public static void initDatabase() {
-        Nitrite database = Nitrite.builder()
+        FileSystemService.initDirectory();
+         database = Nitrite.builder()
                 .filePath(getPathToFile("clients.db").toFile())
                 .openOrCreate("biblioteca", "biblioteca");
 
         userRepository = database.getRepository(User.class);
     }
+
 
     public static void addUser(String username,String password,String name,String email,String address,String phone) throws UsernameAlreadyExistsException,NoUpperCaseException,UncompletedFieldsException {
         AllFieldsCompleted(username,password,name,email,address,phone);
@@ -96,7 +99,7 @@ public class UserService {
 
     }
 
-    private static String encodePassword(String salt, String password) {
+    public static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
 
@@ -141,6 +144,10 @@ public class UserService {
         }
         return au;
     }
+    public static List<User> getAllUsers()
+    {
+        return userRepository.find().toList();
+    }
 
     private static MessageDigest getMessageDigest() {
         MessageDigest md;
@@ -151,15 +158,19 @@ public class UserService {
         }
         return md;
     }
-  public static void deleteRecord() {
+  public static void deleteRecord(String t) {
         Cursor<User> cursor = userRepository.find();
         for (User user : cursor) {
-           if(user.getName().equals(""))
+           if(user.getUsername().equals(t))
            {
                userRepository.remove(user);
            }
 
         }
+    }
+    public static void closeDatabase()
+    {
+        database.close();
     }
 
 
