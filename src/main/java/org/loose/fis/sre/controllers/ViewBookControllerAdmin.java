@@ -13,7 +13,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.loose.fis.sre.model.BorrowedBook;
 import org.loose.fis.sre.model.ClickedBook;
+import org.loose.fis.sre.model.SelectedClient;
+import org.loose.fis.sre.services.BookService;
+import org.loose.fis.sre.services.BorrowedBooksService;
 
 
 import java.io.IOException;
@@ -38,6 +42,8 @@ public class ViewBookControllerAdmin implements Initializable {
     private Button backButton;
     @FXML
     private Button bcButton;
+    @FXML
+    private Button returnButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -79,6 +85,14 @@ public class ViewBookControllerAdmin implements Initializable {
             scene.setFullScreen(true);
 
     }
+    public void handleMark()  {
+        returnButton.setOnMouseClicked(v-> {
+            BorrowedBooksService.setasreturnedd(ClickedBook.selectedBook,SelectedClient.selectedClient);
+
+        });}
+
+
+
     @FXML
     public void exitApplication(ActionEvent event) {
         Platform.exit();
