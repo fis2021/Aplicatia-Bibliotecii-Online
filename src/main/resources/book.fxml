@@ -50,7 +50,7 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Button fx:id="borrowButton" layoutX="198.0" layoutY="760.0" mnemonicParsing="false" onAction="#handleBorrow" prefHeight="79.0" prefWidth="263.0" style="-fx-background-color: green;" styleClass="bt" stylesheets="@buttons.css" text="Borrow me" textAlignment="CENTER" textFill="#e10808">
+      <Button fx:id="borrowButton" layoutX="187.0" layoutY="890.0" mnemonicParsing="false" onAction="#handleBorrow" prefHeight="79.0" prefWidth="263.0" style="-fx-background-color: green;" styleClass="bt" stylesheets="@buttons.css" text="Borrow me" textAlignment="CENTER" textFill="#e10808">
          <font>
             <Font name="Book Antiqua" size="22.0" />
          </font>
