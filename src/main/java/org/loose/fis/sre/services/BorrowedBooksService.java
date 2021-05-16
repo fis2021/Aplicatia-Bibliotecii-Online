@@ -7,6 +7,7 @@ import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.sre.model.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import static org.loose.fis.sre.services.FileSystemService.getPathToFile;
@@ -14,9 +15,10 @@ import static org.loose.fis.sre.services.FileSystemService.getPathToFile;
 public class BorrowedBooksService {
     public static ObjectRepository<BorrowedBook> borrowedRepository;
     private static boolean isOk=true;
+    private static Nitrite database;
     public static void initDatabase() {
 
-        Nitrite database = Nitrite.builder()
+         database = Nitrite.builder()
                 .filePath(getPathToFile("borbooks.db").toFile())
                 .openOrCreate("biblioteca", "biblioteca");
 
@@ -153,6 +155,13 @@ public class BorrowedBooksService {
         return ar;
     }
 
+    public static List<BorrowedBook> getAllBooks()
+    {return borrowedRepository.find().toList();
 
+    }
+    public static void closeDatabase()
+    {
+        database.close();
+    }
 
 }
