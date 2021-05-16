@@ -1,11 +1,13 @@
 package org.loose.fis.sre.services;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class FileSystemService {
-    public static  String APPLICATION_FOLDER = ".clients";
+    public static String APPLICATION_FOLDER = ".clients";
     private static final String USER_FOLDER = System.getProperty("user.home");
 
     public static Path getPathToFile(String... path) {

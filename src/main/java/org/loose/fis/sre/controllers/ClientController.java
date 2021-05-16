@@ -35,11 +35,11 @@ public class ClientController implements Initializable {
     Button profileButton;
     @FXML
     private ImageView imgView;
-    private Book currentBook;
     @FXML
     private Button outButton;
     @FXML
     Button searchBookButton;
+    public static Book currentBook;
     public void handleSearchAction() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("SearchABook.fxml"));
         Stage scene= (Stage) searchBookButton.getScene().getWindow();
@@ -48,6 +48,7 @@ public class ClientController implements Initializable {
         scene.setResizable(false);
         scene.setMinHeight(700);
         scene.setMinWidth(700);
+        scene.setTitle("Search a book");
     }
 
 
@@ -60,6 +61,7 @@ public class ClientController implements Initializable {
         scene.setResizable(false);
         scene.setMinHeight(700);
         scene.setMinWidth(700);
+        scene.setTitle("My profile");
 
 
 
@@ -129,18 +131,20 @@ public class ClientController implements Initializable {
                 messages[3] = "“There is no friend as loyal as a book”";
                 Image[]img=new Image[3];
                 ArrayList<Book> a=getLast();
-                img[0]= new Image(a.get(0).getPhoto_path());
+                if(a.size()==3)
+                {img[0]= new Image(a.get(0).getPhoto_path());
                 img[1]=new Image(a.get(1).getPhoto_path());
-                img[2]=new Image(a.get(2).getPhoto_path());
+                img[2]=new Image(a.get(2).getPhoto_path());}
                 int cnt=0;
                 while (true) {
                     Random rand = new Random();
                     labelMain.setText(messages[rand.nextInt(messages.length)]);
+                    if(a.size()==3){
                     imgView.setImage(img[cnt]);
                     currentBook=a.get(cnt);
                     cnt++;
                     if(cnt==3)
-                        cnt=0;
+                        cnt=0;}
 
                     try {
                         Thread.sleep(10000);

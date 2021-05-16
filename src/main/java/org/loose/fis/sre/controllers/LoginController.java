@@ -53,7 +53,6 @@ public class LoginController {
         try
         {
             LoggedUser.loggedUser=UserService.userExists(usernameField.getText(),passwordField.getText());
-            logMessage.setText("Successful log in");
             if(UserService.checkIsAdmin(usernameField.getText())==true)
             {
                 Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("admin_main_page.fxml"));
@@ -67,6 +66,8 @@ public class LoginController {
                 scene.setMaxWidth(1920);
                 scene.setTitle("Admin");
                 scene.setFullScreen(true);
+
+
 
 
             }

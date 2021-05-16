@@ -15,7 +15,7 @@
             <Font name="Century Schoolbook" size="58.0" />
          </font>
       </Text>
-      <Button fx:id="returnButton" layoutX="118.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleReturnBook" prefHeight="71.0" prefWidth="430.0" styleClass="bt" stylesheets="@buttons.css" text="Mark a book as returned" textAlignment="CENTER">
+      <Button fx:id="returnButton"  id="returnButtonn" layoutX="118.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleReturnBook" prefHeight="71.0" prefWidth="430.0" styleClass="bt" stylesheets="@buttons.css" text="Mark a book as returned" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
@@ -54,7 +54,7 @@
             </Text>
          </children>
       </Pane>
-      <Button fx:id="borrowedButton" layoutX="1445.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#handleBorrowButton" prefHeight="69.0" prefWidth="340.0" styleClass="bt" stylesheets="@buttons.css" text="Borrowed books" textAlignment="CENTER">
+      <Button fx:id="borrowedButton" id="borrowButtonAdmin"  layoutX="1445.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#handleBorrowButton" prefHeight="69.0" prefWidth="340.0" styleClass="bt" stylesheets="@buttons.css" text="Borrowed books" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
@@ -64,13 +64,13 @@
             <Font name="Century Schoolbook" size="42.0" />
          </font>
       </Text>
-      <Button fx:id="addBookButton" layoutX="781.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="69.0" prefWidth="340.0" styleClass="bt" stylesheets="@buttons.css" text="Add  books" textAlignment="CENTER">
+      <Button fx:id="addBookButton" id="addBook" layoutX="781.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleAddBook" prefHeight="69.0" prefWidth="340.0" styleClass="bt" stylesheets="@buttons.css" text="Add  books" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
       </Button>
-      <ImageView fx:id="imgView" fitHeight="350.0" fitWidth="542.0" layoutX="913.0" layoutY="629.0" onMouseClicked="#handleImg" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="outButton" layoutX="8.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#handleOut" prefHeight="69.0" prefWidth="333.0" styleClass="bt" stylesheets="@buttons.css" text="Log out" textAlignment="CENTER">
+      <ImageView fx:id="imgView"  id="imgThread" fitHeight="350.0" fitWidth="542.0" layoutX="913.0" layoutY="629.0" onMouseClicked="#handleImg" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="outButton"  id="OutButtonAdmin" layoutX="8.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#handleOut" prefHeight="69.0" prefWidth="333.0" styleClass="bt" stylesheets="@buttons.css" text="Log out" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>

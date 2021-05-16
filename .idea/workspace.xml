@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="317b3f21-e1f6-465f-8c38-7745f2defdca" name="Default Changelist" comment="created a tableview to see all the clients and a search field">
+    <list default="true" id="317b3f21-e1f6-465f-8c38-7745f2defdca" name="Default Changelist" comment="book view update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AddBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AddBookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AllClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/AllClientsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ViewBookControllerAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ViewBookControllerAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ViewBookControllerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/controllers/ViewBookControllerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/BorrowedBooksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/BorrowedBooksService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/add_book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/add_book.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/allclients.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/allclients.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/book.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/book.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bookAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bookAdmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/FileSystemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/FileSystemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/sre/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +23,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -51,33 +49,33 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.47126436" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Proiect_FIS\BAZADEDATE\project\target\classes" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.loose.fis.sre.services" />
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.loose.fis.sre.services" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.sre.Main" />
-      <module name="project" />
-      <option name="VM_PARAMETERS" value="--module-path ${PATH_TO_FX} --add-modules javafx.controls,javafx.fxml " />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.loose.fis.sre.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserServiceTest.CheckIfDeletingIsOk">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -91,10 +89,93 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceTest.CheckIfDeletingIsOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.sre.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.sre.services" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.sre.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="CheckIfDeletingIsOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.CheckIfReturnsAllClients" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.sre.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.sre.services" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.sre.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="CheckIfReturnsAllClients" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.IncorrectPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.sre.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.sre.services" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.sre.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="IncorrectPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.IncorrectUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.sre.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.sre.services" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.sre.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="IncorrectUsername" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.checkEncoding" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.sre.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.sre.services" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.sre.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="checkEncoding" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UserServiceTest.CheckIfDeletingIsOk" />
+        <item itemvalue="JUnit.UserServiceTest.CheckIfReturnsAllClients" />
+        <item itemvalue="JUnit.UserServiceTest.IncorrectUsername" />
+        <item itemvalue="JUnit.UserServiceTest.IncorrectPassword" />
+        <item itemvalue="JUnit.UserServiceTest.checkEncoding" />
       </list>
     </recent_temporary>
   </component>
@@ -113,6 +194,8 @@
       <workItem from="1620884246305" duration="6318000" />
       <workItem from="1620901099883" duration="40640000" />
       <workItem from="1620997776101" duration="9709000" />
+      <workItem from="1621147529900" duration="17485000" />
+      <workItem from="1621168321122" duration="6459000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/AB-1' into Project_Merge&#10;&#10;# Conflicts:&#10;#&#9;pom.xml">
       <created>1620505132335</created>
@@ -205,7 +288,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620986798115</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="updates">
+      <created>1621148023814</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1621148023814</updated>
+    </task>
+    <task id="LOCAL-00015" summary="book view update">
+      <created>1621148327308</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1621148327308</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +376,8 @@
     <MESSAGE value="created a feature to show borrow button only for clients" />
     <MESSAGE value="created communication between borrow button and the page of borrowed books" />
     <MESSAGE value="created a tableview to see all the clients and a search field" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a tableview to see all the clients and a search field" />
+    <MESSAGE value="updates" />
+    <MESSAGE value="book view update" />
+    <option name="LAST_COMMIT_MESSAGE" value="book view update" />
   </component>
 </project>
