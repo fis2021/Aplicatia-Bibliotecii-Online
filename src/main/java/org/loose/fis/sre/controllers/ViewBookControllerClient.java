@@ -15,6 +15,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.loose.fis.sre.model.ClickedBook;
 import org.loose.fis.sre.model.LoggedUser;
+import org.loose.fis.sre.services.BookService;
 import org.loose.fis.sre.services.BorrowedBooksService;
 
 import java.io.IOException;
@@ -73,7 +74,7 @@ public class ViewBookControllerClient implements Initializable {
             borrowButton.setDisable(true);
             BorrowedBooksService.addBorrowedBook(LoggedUser.loggedUser, ClickedBook.selectedBook);
             borrowMessage.setText("Carte împrumutată cu succes");
-            ClickedBook.selectedBook.decrementNrBook();
+            BookService.decrementStoc(ClickedBook.selectedBook.getTitlu(),ClickedBook.selectedBook.getAutor(),ClickedBook.selectedBook.getLimba());
         }
     }
     public void handleback() throws IOException {

@@ -40,6 +40,23 @@ public class BookService {
         }
         bookRepository.insert(b);
     }
+    public static void decrementStoc(String titlu, String autor, String limba) {
+        Cursor<Book> cursor = bookRepository.find();
+        for (Book book : cursor) {
+            if (titlu.equals(book.getTitlu())) {
+                if (autor.equals(book.getAutor())) {
+
+                    if (limba.equals(book.getLimba())) {
+                        book.decrementNrBook();
+                        bookRepository.update(book);
+
+                    }
+
+                }
+            }
+        }
+    }
+
 
     public static void checkBookDoesNotAlreadyExists(String titlu, String autor, String limba) throws BookExistsException {
         Cursor<Book> cursor = bookRepository.find();
