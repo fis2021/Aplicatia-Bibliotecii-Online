@@ -12,14 +12,13 @@ import org.loose.fis.sre.services.UserService;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-
+import java.nio.file.Paths;
 
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        initDirectory();
         UserService.initDatabase();
         BookService.initDatabase();
         BorrowedBooksService.initDatabase();
@@ -30,11 +29,7 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    private void initDirectory() {
-        Path applicationHomePath = FileSystemService.APPLICATION_HOME_PATH;
-        if (!Files.exists(applicationHomePath))
-            applicationHomePath.toFile().mkdirs();
-    }
+
     @Override
     public void stop()
     {
