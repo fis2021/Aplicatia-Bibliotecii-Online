@@ -4,6 +4,8 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,6 +19,7 @@ import javafx.util.Duration;
 import org.loose.fis.sre.model.Book;
 import javafx.scene.image.ImageView ;
 import org.loose.fis.sre.model.ClickedBook;
+import org.loose.fis.sre.model.LatestOrClient;
 
 import java.io.File;
 import java.io.IOException;
@@ -36,6 +39,9 @@ public class AdminController implements Initializable {
     private ImageView imgView;
     @FXML
     private Button outButton;
+    @FXML
+    private Button borrowedButton;
+
     private Book currentBook;
     public void handleAddBook() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("add_book.fxml"));
@@ -61,6 +67,8 @@ public class AdminController implements Initializable {
         scene.setMaxWidth(1920);
         scene.setTitle("Book");
         scene.setFullScreen(true);
+        LatestOrClient.client=false;
+
 
     }
     public void handleTransition(){
@@ -149,6 +157,23 @@ public class AdminController implements Initializable {
         };
         thread.start();
 
+    }
+    public void handleBorrowButton() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("allclients.fxml"));
+        Stage scene= (Stage) borrowedButton.getScene().getWindow();
+        scene.setScene(new Scene(root,725,490));
+        scene.setResizable(false);
+        scene.setMinHeight(1080);
+        scene.setMinWidth(1920);
+        scene.setMaxHeight(1080);
+        scene.setMaxWidth(1920);
+        scene.setTitle("All Clients");
+        scene.setFullScreen(true);
+
+    }
+    @FXML
+    public void exitApplication(ActionEvent event) {
+        Platform.exit();
     }
 
 }

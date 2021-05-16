@@ -64,5 +64,6 @@
             <Font size="25.0" />
          </font>
       </Text>
+      <Button fx:id="backButton" layoutX="1778.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#handleback" prefHeight="63.0" prefWidth="132.0" styleClass="bt" stylesheets="@buttons.css" text="Go back" />
    </children>
 </AnchorPane>

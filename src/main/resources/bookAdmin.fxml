@@ -50,5 +50,7 @@
                 <Font size="25.0" />
             </font>
         </Text>
+      <Button fx:id="backButton" layoutX="1771.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#handleback" prefHeight="45.0" prefWidth="120.0" styleClass="bt" stylesheets="@buttons.css" text="Go to Menu" />
+      <Button fx:id="bcButton"  layoutX="1770.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#handleBack" prefHeight="45.0" prefWidth="120.0" styleClass="bt" stylesheets="@buttons.css" text="Go back" />
     </children>
 </AnchorPane>
