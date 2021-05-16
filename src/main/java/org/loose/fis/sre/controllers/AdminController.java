@@ -19,9 +19,7 @@ import javafx.util.Duration;
 import org.loose.fis.sre.model.Book;
 import javafx.scene.image.ImageView ;
 import org.loose.fis.sre.model.ClickedBook;
-import org.loose.fis.sre.model.LatestOrClient;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -57,7 +55,7 @@ public class AdminController implements Initializable {
     }
     public void handleImg() throws IOException {
         ClickedBook.selectedBook=currentBook;
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("bookAdmin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("justAviewBookAdmin.fxml"));
         Stage scene= (Stage) imgView.getScene().getWindow();
         scene.setScene(new Scene(root,1920,1080));
         scene.setResizable(false);
@@ -67,7 +65,7 @@ public class AdminController implements Initializable {
         scene.setMaxWidth(1920);
         scene.setTitle("Book");
         scene.setFullScreen(true);
-        LatestOrClient.client=false;
+
 
 
     }

@@ -15,7 +15,6 @@ import javafx.stage.Stage;
 import org.loose.fis.sre.MyListener;
 import org.loose.fis.sre.model.Book;
 import org.loose.fis.sre.model.ClickedBook;
-import org.loose.fis.sre.model.LatestOrClient;
 
 import java.io.IOException;
 
@@ -42,7 +41,6 @@ public class MiniBookController {
         scene.setMaxWidth(1920);
         scene.setTitle("Book");
         scene.setFullScreen(true);
-        LatestOrClient.client=true;
 
     }
     private Book book;
