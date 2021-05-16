@@ -1,7 +1,9 @@
 package org.loose.fis.sre.controllers;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -31,6 +33,10 @@ public class MyBorrowedBooksController {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("MyProfilePage.fxml"));
         Stage scene= (Stage) backB.getScene().getWindow();
         scene.setScene(new Scene(root,500,500));
+        scene.setFullScreen(true);
+        scene.setResizable(false);
+        scene.setMinHeight(700);
+        scene.setMinWidth(700);
 
 
 
@@ -42,7 +48,7 @@ public class MyBorrowedBooksController {
         String aux;
         ObservableList<String> items = FXCollections.observableArrayList();
         for (BorrowedBook book : BorrowedBooksService.borrowedRepository.find()) {
-            if (LoggedUser.loggedUser.equals(book.getU()) && book.isReturned()==false ) {
+            if (LoggedUser.loggedUser.equals(book.getU()) && !book.isReturned() ) {
                 aux = book.getB().getTitlu() +" de "+ book.getB().getAutor() ;
                 items.add(aux);
                 borrowedBooksList.setItems(items);
@@ -50,5 +56,8 @@ public class MyBorrowedBooksController {
         }
     }
 
-
+    @FXML
+    public void exitApplication(ActionEvent event) {
+        Platform.exit();
+    }
 }
