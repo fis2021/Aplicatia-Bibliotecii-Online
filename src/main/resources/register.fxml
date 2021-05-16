@@ -84,7 +84,7 @@
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Text>
-            <Label fx:id="registrationMessage" alignment="CENTER" layoutX="6.0" layoutY="443.0" prefHeight="18.0" prefWidth="417.0" textAlignment="JUSTIFY" textFill="#e10808">
+            <Label fx:id="registrationMessage" alignment="CENTER" layoutX="14.0" layoutY="429.0" prefHeight="18.0" prefWidth="417.0" textAlignment="JUSTIFY" textFill="#e10808">
                <font>
                   <Font name="Broadway" size="13.0" />
                </font></Label>

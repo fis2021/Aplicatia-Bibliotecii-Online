@@ -46,7 +46,7 @@ public class LoginController {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
         Stage scene= (Stage) logButton.getScene().getWindow();
         scene.setTitle("Welcome");
-        scene.setScene(new Scene(root,725,490));
+        scene.setScene(new Scene(root,725,495));
     }
 
     public void  handleLoginAction() throws IOException {

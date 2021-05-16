@@ -1,6 +1,8 @@
 package org.loose.fis.sre.controllers;
 
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -50,9 +52,7 @@ public class SearchBookController  {
        scene.setScene(new Scene(root,500,500));
 
 
-
    }
-
 
     public void handleSearch() throws IOException {
 
@@ -79,7 +79,10 @@ public class SearchBookController  {
 
     }
 
-
+    @FXML
+    public void exitApplication(ActionEvent event) {
+        Platform.exit();
+    }
 }
 
 

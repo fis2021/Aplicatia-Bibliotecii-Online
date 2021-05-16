@@ -51,6 +51,11 @@
             </font>
         </Text>
       <Button fx:id="backButton" layoutX="1771.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#handleback" prefHeight="45.0" prefWidth="120.0" styleClass="bt" stylesheets="@buttons.css" text="Go to Menu" />
-      <Button fx:id="bcButton"  layoutX="1770.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#handleBack" prefHeight="45.0" prefWidth="120.0" styleClass="bt" stylesheets="@buttons.css" text="Go back" />
+      <Button fx:id="bcButton" layoutX="1770.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#handleBack" prefHeight="45.0" prefWidth="120.0" styleClass="bt" stylesheets="@buttons.css" text="Go back" />
+      <Button fx:id="returnButton" layoutX="197.0" layoutY="900.0" mnemonicParsing="false" onMouseClicked="#handleMark" prefHeight="79.0" prefWidth="263.0" style="-fx-background-color: green;" styleClass="bt" stylesheets="@buttons.css" text="Mark as returned" textAlignment="CENTER" textFill="#e10808">
+         <font>
+            <Font name="Book Antiqua" size="22.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
