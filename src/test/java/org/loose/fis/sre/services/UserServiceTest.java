@@ -114,8 +114,28 @@ class UserServiceTest {
     {
         assertThrows(UncompletedFieldsException.class,()->
         {
-            UserService.addUser("Maria", "maria","","purcar.iasminamaria@yahoo.com","Dobra","078632382");
-            UserService.addUser("Maria", "maria","ana","purcar.iasminamaria@yahoo.com","D","078632382");
+            UserService.addUser("Maria", "Maria","","purcar.iasminamaria@yahoo.com","Dobra","078632382");
+
+        });
+        assertThrows(UncompletedFieldsException.class,()->
+        {
+            UserService.addUser( "","Maria","Maria","purcar.iasminamaria@yahoo.com","Dobra","078632382");
+
+        });
+        assertThrows(UncompletedFieldsException.class,()->
+        {
+            UserService.addUser("Maria", "Maria","Maria","","Dobra","078632382");
+
+        });
+        assertThrows(UncompletedFieldsException.class,()->
+        {
+            UserService.addUser("Maria", "Maria","Maria","purcar.iasminamaria@yahoo.com","","078632382");
+
+        });
+        assertThrows(UncompletedFieldsException.class,()->
+        {
+            UserService.addUser("Maria", "Maria","Maria","purcar.iasminamaria@yahoo.com","Dobra","");
+
         });
     }
     @Test
@@ -138,19 +158,19 @@ class UserServiceTest {
 
     @Test
     @DisplayName("Check if the user is admin")
-    void CheckIsAdmin() throws NoUpperCaseException, UsernameAlreadyExistsException, UncompletedFieldsException {
+    void TestCheckIsAdmin() throws NoUpperCaseException, UsernameAlreadyExistsException, UncompletedFieldsException {
         UserService.addAdmin("Ana", "Maria","Purcar Iasmina","purcar.iasminamaria@yahoo.com","Dobra","078632382");
         assertThat(UserService.checkIsAdmin("Ana")).isEqualTo(true);
     }
     @Test
     @DisplayName("Password is encoded correctly")
-    void checkEncoding() throws NoUpperCaseException, UsernameAlreadyExistsException, UncompletedFieldsException {
+    void TestEncoding() throws NoUpperCaseException, UsernameAlreadyExistsException, UncompletedFieldsException {
         UserService.addUser("Florina","Florina","Popescu Florina","florina@yahoo.com","Deva","07839232");
         assertThat(UserService.getAllUsers().get(0).getPassword()).isEqualTo(UserService.encodePassword("Florina","Florina"));
     }
     @Test
     @DisplayName("List of all clients")
-    void CheckIfReturnsAllClients() throws NoUpperCaseException, UsernameAlreadyExistsException, UncompletedFieldsException {
+    void TestgettingAllUsers() throws NoUpperCaseException, UsernameAlreadyExistsException, UncompletedFieldsException {
         UserService.addUser("Sandra","Sandra","Popescu Sandra","sandra@yahoo.com","Deva","083792130");
         UserService.addUser("Andra","Andra","Popescu Andra","andra@yahoo.com","Deva","0792130");
         UserService.addAdmin("Andrei","Andrei","Popescu Andrei","Andrei@yahoo.com","Deva","087392");
@@ -158,7 +178,7 @@ class UserServiceTest {
     }
     @Test
     @DisplayName("Deleting works ok")
-    void CheckIfDeletingIsOk() throws NoUpperCaseException, UsernameAlreadyExistsException, UncompletedFieldsException, IncorrectPasswordException, InvalidUsernameException {
+    void TestDeleting() throws NoUpperCaseException, UsernameAlreadyExistsException, UncompletedFieldsException, IncorrectPasswordException, InvalidUsernameException {
         UserService.addUser("Sandra","Sandra","Popescu Sandra","sandra@yahoo.com","Deva","083792130");
         UserService.addUser("Andra","Andra","Popescu Andra","andra@yahoo.com","Deva","0792130");
         UserService.deleteRecord("Andra");
