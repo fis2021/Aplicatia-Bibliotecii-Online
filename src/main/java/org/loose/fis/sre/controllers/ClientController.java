@@ -35,11 +35,11 @@ public class ClientController implements Initializable {
     Button profileButton;
     @FXML
     private ImageView imgView;
-    private Book currentBook;
     @FXML
     private Button outButton;
     @FXML
     Button searchBookButton;
+    public static Book currentBook;
     public void handleSearchAction() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("SearchABook.fxml"));
         Stage scene= (Stage) searchBookButton.getScene().getWindow();
@@ -48,6 +48,7 @@ public class ClientController implements Initializable {
         scene.setResizable(false);
         scene.setMinHeight(700);
         scene.setMinWidth(700);
+        scene.setTitle("Search a book");
     }
 
 
@@ -60,6 +61,7 @@ public class ClientController implements Initializable {
         scene.setResizable(false);
         scene.setMinHeight(700);
         scene.setMinWidth(700);
+        scene.setTitle("My profile");
 
 
 
