@@ -42,7 +42,7 @@ public class AdminController implements Initializable {
     @FXML
     private Button returnButton;
 
-    private Book currentBook;
+    public static Book currentBook;
 
 
     public void handleReturnBook() throws IOException {

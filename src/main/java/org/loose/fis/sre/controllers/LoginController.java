@@ -68,6 +68,8 @@ public class LoginController {
                 scene.setFullScreen(true);
 
 
+
+
             }
             else
             {

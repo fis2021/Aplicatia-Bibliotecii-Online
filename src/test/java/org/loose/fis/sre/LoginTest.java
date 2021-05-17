@@ -32,7 +32,14 @@ class LoginTest {
     @BeforeEach
     void setUp() throws Exception {
         FileSystemService.APPLICATION_FOLDER=".test-registration";
+        try {
+            UserService.closeDatabase();
+            BookService.closeDatabase();
+        } catch (Exception e){
+
+        }
         FileUtils.cleanDirectory(FileSystemService.getapplicationhomefolder().toFile());
+
         UserService.initDatabase();
         BookService.initDatabase();
 
@@ -92,6 +99,7 @@ class LoginTest {
         robot.write("Iasmina");
         robot.clickOn("#loginButton");
         FxAssert.verifyThat(robot.window("Admin"), WindowMatchers.isShowing());
+
     }
 
 
