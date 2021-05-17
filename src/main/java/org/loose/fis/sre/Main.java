@@ -22,7 +22,6 @@ public class Main extends Application {
         UserService.initDatabase();
         BookService.initDatabase();
         BorrowedBooksService.initDatabase();
-       // UserService.addAdmin("iasmina","Iasmina","Purcar Iasmina","iasmina@yahoo.com","Dobra","0739213");
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
         primaryStage.setTitle("Welcome");
         primaryStage.setScene(new Scene(root, 725, 490));
